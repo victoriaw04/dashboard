@@ -14,7 +14,7 @@ How do adolescent birth rates vary across California counties, and how does the 
 
 ## Dashboard
 
-Live dashboard: [GitHub Pages URL]
+Live dashboard: [https://victoriaw04.github.io/dashboard/]
 
 The root `index.html` uses MapLibre GL JS 5.6.2 with CARTO's Positron vector basemap, whose paint colors are converted to grayscale in the saved style. Click counties for rates and birth counts; click orange AFLP points for directory details. Local assets use relative paths. The public basemap's remote vector tiles, fonts, and sprites require internet access; no API keys, backend, or build step is needed. OpenStreetMap and CARTO attribution is preserved.
 
