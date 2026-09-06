@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Victoria's Week 9 research dashboard comparing California county adolescent birth rates with publicly listed AFLP locations.">
+  <title>Adolescent Birth Rates and AFLP Services in California</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./vendor/maplibre-gl.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Victoria · Week 9 research dashboard</p>
+      <h1>Adolescent Birth Rates and AFLP Services in California</h1>
+      <section class="question" aria-labelledby="question-heading">
+        <h2 id="question-heading">Research question</h2>
+        <p>How do adolescent birth rates vary across California counties, and how does the geographic distribution of publicly listed AFLP services compare with these patterns?</p>
+      </section>
+      <p class="intro">County birth rates from the California Department of Public Health (CDPH), compared with its publicly listed Adolescent Family Life Program (AFLP) locations. County boundaries are from the California Department of Technology.</p>
+    </header>
+
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="map-heading"><div><h2 id="map-heading">County birth rates &amp; program locations</h2><p>2024 · Ages 15–19 · Live births per 1,000 females</p></div><span class="tag">California</span></div>
+      <p id="status" role="status">Loading county data and AFLP locations…</p>
+      <div id="map" aria-label="Interactive map of California adolescent birth rates and AFLP locations"></div>
+      <noscript><p>Enable JavaScript to view the interactive map.</p></noscript>
+      <div class="legend" aria-label="Map legend">
+        <div><strong>Births per 1,000 females, ages 15–19</strong><ul class="scale">
+          <li><i style="background:#edf4f2"></i>0–&lt;5</li>
+          <li><i style="background:#b7d7d0"></i>5–&lt;10</li>
+          <li><i style="background:#70ada5"></i>10–&lt;15</li>
+          <li><i style="background:#34796f"></i>15–&lt;20</li>
+          <li><i style="background:#164d48"></i>20+</li>
+          <li><i style="background:#d6d6d6"></i>No data</li>
+        </ul></div>
+        <div class="point-key"><i></i>Publicly listed AFLP location</div>
+      </div>
+      <p class="map-note">Click a county or a point for details. Zoom in to separate nearby locations. Gray counties have missing or suppressed rates. AFLP points represent geocoded directory mailing addresses, not service areas.</p>
+    </section>
+
+    <section class="sources" aria-labelledby="sources-heading">
+      <h2 id="sources-heading">Data sources</h2>
+      <ul>
+        <li><a href="https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/Data/Adolescent-Births-in-California.aspx">CDPH — Adolescent Births</a>. Supplied CSV; 2024 single-year “Adolescent Birth Rate,” ages 15–19, total population. <a href="./data/Data-Adolescent-Births.csv">Original data</a> · <a href="./data/births-methodology.pdf">CDPH methodology</a>.</li>
+        <li><a href="https://www.cdph.ca.gov/Programs/CFH/DMCAH/AFLP/Pages/Sites.aspx">CDPH — Adolescent Family Life Program, Where We Are</a>. Public directory retrieved September 5, 2026; 17 addresses matched by the US Census Bureau and one street-level approximation from OpenStreetMap. <a href="./data/aflp-directory.tsv">Directory snapshot</a>.</li>
+        <li><a href="https://gis.data.ca.gov/datasets/California::california-county-boundaries-and-identifiers">California Department of Technology — California County Boundaries and Identifiers</a>. Without coastal buffers; retrieved September 5, 2026 and simplified for display.</li>
+      </ul>
+    </section>
+    <section class="limitations" aria-labelledby="limitations-heading">
+      <h2 id="limitations-heading">Limitations</h2>
+      <p>Adolescent birth data represent live births and do not represent every pregnant youth. Publicly listed AFLP locations indicate where programs are located, but do not directly measure actual service accessibility or capacity. The directory snapshot and birth data describe different dates; this map does not establish causal relationships.</p>
+      <p>Following CDPH’s suppression rule, rates and birth counts with a numerator below 10 are shown as “No data,” including zero-coded rows in the supplied export. This dashboard uses the latest single year available in that file; CDPH’s own county dashboard uses three-year aggregates. Geocoded mailing addresses are approximate and may differ from service delivery sites. The Madera point is a street-level approximation on Sunrise Avenue, not a verified building location.</p>
+    </section>
+    <footer>Victoria · Week 9 · California adolescent health</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,209 @@
+                         About the Data ­ Adolescent Births
+
+Indicator Description
+Adolescent births are infants born live to California residents aged 10­21 years (shown
+as 10­17, 15­19, and 18­21).
+The adolescent birth rate is the number of births per 1,000 females aged 10­21 years
+(shown as 10­17, 15­19, and 18­21).
+
+Data Sources
+California Department of Public Health, Birth Statistical Master File, 2000­2017:
+Compiled from information on birth certificates, including demographic information
+related to the infant and parents, as well as medical data related to the birth.
+California Department of Public Health, California Comprehensive Master Birth File,
+2018­2024: Compiled from information on birth certificates, including demographic
+information related to the infant and parents, as well as medical data related to the birth.
+Beginning in 2018, the California Comprehensive Master Birth File replaced the Birth
+Statistical Master File.
+For 2000­2009: State of California, Department of Finance. Demographic Research
+Unit. Race/Hispanics Population with Age and Gender Detail, 2000­2010. Sacramento,
+California. September 2012.
+For 2010­2019: State of California, Department of Finance, California and Counties
+Intercensal Population by Age, Race/Ethnicity, and Gender: 2010­2020. Sacramento,
+California, January 2025.
+For 2020­2024: California Department of Finance. Demographic Research Unit. 2025.
+State And County Population Projections 2020­2070 [P-3: Complete State and County
+Projections Dataset]. Sacramento: California Department of Finance. September 2025.
+
+National Comparison
+Hamilton BE, Rossen L, Lu L, Chong Y. U.S. and state trends on teen births, 1990­
+2019. National Center for Health Statistics. 2021.
+Osterman MJK, Hamilton BE, Martin JA, Driscoll AK, Valenzuela CP.
+Births: Final data for 2021. National Vital Statistics Reports; vol 72, no 1. Hyattsville,
+MD: National Center for Health Statistics. 2023.
+
+                                              PUBLIC
+Osterman MJK, Hamilton BE, Martin JA, Driscoll AK, Valenzuela CP.
+Births: Final data for 2022. National Vital Statistics Reports; vol 73, no 2. Hyattsville,
+MD: National Center for Health Statistics. 2024.
+Osterman MJK, Hamilton BE, Martin JA, Driscoll AK, Valenzuela CP.
+Births: Final data for 2023. National Vital Statistics Reports; vol 74, no 1. Hyattsville,
+MD: National Center for Health Statistics. 2025.
+Martin JA, Hamilton BE, Osterman MJK. Births in the United States, 2024. NCHS Data
+Brief. 2025 Jul;(535):1­8.
+
+Downloadable Data Table
+The downloadable data table includes additional years of archival data not shown on
+the dashboard. For optimal readability of the data visualizations, only the most recent
+data are shown.
+
+Data Analysis
+The adolescent birth data shown in these dashboards are the number and percent of
+total live births to adolescents aged 10­21 years, stratified by selected birth and
+maternal characteristics. Denominators include all live births to California resident
+mothers/parents giving birth.
+The adolescent birth rate shown is the number of births per 1,000 females aged 10­21
+years, stratified by age group, geography, and maternal race/ethnicity. Denominators
+are based on the estimated population of California resident females aged 10­21 years.
+The 95% confidence interval presented in the tooltips indicates there is a 95% chance
+that the range contains the true prevalence or rate in the population. Rates or
+percentages with wide confidence intervals should be interpreted with caution.
+The state dashboard uses single year data; the county dashboard uses three-year
+aggregated data.
+Overlapping time periods show the general direction or slope of the trendline across the
+entire timeframe. Rates should not be compared for overlapping time periods; for
+example, rates for 2020­2022 and 2021­2023 should not be compared. Only non-
+overlapping periods can be compared; for example, rates for 2018­2020 and 2021­
+2023 can be compared.
+See Category and Subcategory Definitions below for additional inclusion/exclusion
+criteria.
+
+                                              PUBLIC
+Data Suppression
+For adolescent births, the numerator, denominator, rate, and confidence interval are not
+shown when the numerator or denominator is less than 10.
+For the adolescent birth rate, the numerator, rate, and confidence interval are not shown
+when the numerator is less than 10.
+
+Category and Subcategory Definitions
+Age: Age of mother/parent giving birth at time of delivery. Excludes records with
+unknown age.
+Birthweight: Weight of the infant at time of delivery, reported in grams. Excludes
+birthweights less than 227 grams, greater than 8165 grams and records with unknown
+birthweight.
+Delivery method: Final route of delivery. Cesarean delivery includes primary and
+repeat cesarean births. Vaginal delivery includes vaginal birth after previous cesarean
+birth. Excludes records with unknown delivery method.
+Delivery payment source: Expected principal source of payment for delivery. Other
+includes Indian Health Service, CHAMPUS/TRICARE, other non-Medi-Cal government
+programs (federal, state, or local), self-insured/self-funded plans or payments from local
+organized charities. Excludes records with unknown payment source and medically
+unattended births.
+Education: Highest level of education attained by the mother/parent giving birth at time
+of delivery. High school graduate includes GED; some college includes college credit
+either without a degree or with an associate's degree; and college graduate includes
+bachelor's degree or higher. Excludes records with unknown education level.
+Geography: State or county of maternal residence at time of delivery.
+Gestational age: Obstetric estimate of gestation at time of delivery, in completed
+weeks. Excludes records with unknown gestational age or values less than 17 weeks or
+greater than 47 weeks.
+Nativity: Birthplace of mother/parent giving birth. Born outside U.S. includes U.S.
+territories, Canadian provinces, and foreign countries. Excludes records with unknown
+birthplace.
+
+                                              PUBLIC
+Neighborhood poverty: Percentage of residents of a census tract who are living below
+the federal poverty threshold. Census tracts with a poverty rate of 30% or higher are
+considered high poverty neighborhoods. Data are based on geocoded maternal
+addresses beginning with 2010 and exclude records that did not geocode. Available
+from: US Census Bureau American Community Survey 5-year estimates: Poverty status
+in the past 12 months
+
+Plurality: Single-gestation births or multiple-gestation births (i.e., twin, triplet, and
+higher-order births).
+
+Population density: Based on Medical Service Study Areas (MSSAs) where maternal
+residence is located. Data are based on geocoded maternal addresses beginning with
+2010 and exclude records that did not geocode. MSSAs are sub-county geographical
+units with population, demographic and physician data. Available from:
+California Department of Health Care Access and Information: Healthcare Workforce
+
+   · An Urban MSSA has a population range of 75,000 to 125,000 and is
+        homogeneous with respect to demographic and socio-economic characteristics.
+
+   · A Rural MSSA has a population density of less than 250 persons per square mile
+        and no population center exceeds 50,000 persons.
+
+   · A Frontier MSSA has a population density of less than 11 persons per square
+        mile.
+
+Prenatal care (trimester of initiation): Trimester of pregnancy in which the
+mother/parent giving birth first received prenatal care. Excludes records with unknown
+prenatal care initiation.
+
+Prenatal care (adequacy of initiation): Often referred to as the Kotelchuck Index,
+adequacy of prenatal care utilization is based on the month prenatal care began and the
+number of visits adjusted for gestational age. The number of visits is assessed by
+comparing the number of reported visits with the number of expected visits for a
+particular gestational age, based on recommendations from ACOG. Inadequate care is
+defined as all prenatal care that began after the fourth month of pregnancy, as well as
+prenatal care that included less than 50% of the recommended number of visits.
+Intermediate care includes 50%­79% of the recommended visits, adequate care
+includes 80%­109%, and adequate plus care is 110% or more of the recommended
+visits. The Kotelchuck Index uses recommendations from ACOG for low-risk
+pregnancies and may not measure the adequacy of care for high-risk women. The
+Kotelchuck Index does not measure the quality of the care provided.
+
+Prepregnancy weight: Body Mass Index (BMI) was calculated from self-reported
+weight and height, classified as underweight (<18.5), normal weight (18.5­24.99),
+overweight (25­29.99) or obese (30+). BMI was calculated only for women reporting
+height within 48­83 inches and weight within 75­399 pounds. BMI values outside 13­
+69.99 were excluded. BMI should not be used as the sole criterion for making health
+
+                                              PUBLIC
+recommendations. It is a screening tool as part of an assessment for determining weight
+classifications. BMI may overestimate or underestimate body fatness in some
+individuals since it does not take into consideration an individual's muscle or bone
+mass.
+
+Race alone and ethnicity (previously labelled Race/Ethnicity as shown below):
+Mutually exclusive racial and ethnic groups reported by the mother/parent giving birth;
+
+percentages across the groups sum to 100 percent. Hispanic includes all persons of
+Hispanic origin of any race, including Other and Unknown race. Multiracial includes
+those of non-Hispanic origin who reported more than one race. The remaining groups
+are of non-Hispanic origin who reported a single race: American Indian or Alaska Native
+(AIAN), Asian, Black, Native Hawaiian or Pacific Islander (NHPI), White, Other, or
+Unknown. Other and Unknown race are not shown on the dashboards but are available
+in the downloadable data table. Race and Hispanic-origin ethnicity are reported
+independently on the birth certificate, with reporting of more than one race allowed.
+
+Race/Ethnicity (previous label)  Race Alone and Ethnicity (current label)
+AIAN                             AIAN alone
+Asian                            Asian alone
+Black                            Black alone
+Hispanic                         Hispanic of any race
+Multi-Race                       Multiracial alone
+Pacific Islander                 NHPI alone
+White                            White alone
+
+Race alone or in combination and ethnicity: Alone or in combination groups combine
+all individuals belonging to a particular racial or ethnic group (whether alone or in
+combination with another racial or ethnic group). For example, a mother/parent giving
+birth who reported being both White and Black would fall into both the "White alone or in
+combination" group and the "Black alone or in combination" group. These groups are
+not mutually exclusive; individuals identifying with more than one race and/or ethnicity
+are included multiple times; therefore, percentages across the groups sum to greater
+than 100 percent. Race and Hispanic-origin ethnicity are reported independently on the
+birth certificate, with reporting of more than one race allowed. This category is shown for
+2014 and forward.
+
+Receipt of WIC food: Mother/parent giving birth received Women, Infants and Children
+(WIC) program food during pregnancy. Excludes records with unknown receipt of WIC
+food.
+
+Sex: Sex of infant at birth is defined as either male or female. Excludes records with
+unknown and nonbinary sex.
+
+                                 PUBLIC
+Total live births: Total number of live births the mother/parent giving birth delivered.
+Twins, triplets, and higher-order births are considered one birth. Excludes records with
+unknown number of live births.
+Suggested Citation
+California Department of Public Health, Center for Family Health, Maternal, Child and
+Adolescent Health Division, Adolescent Births Dashboard, Last Modified April 2026.
+https://www.cdph.ca.gov/Programs/CFH/DMCAH/surveillance/Pages/adolescent-
+births.aspx
+
+                                              PUBLIC
+
