@@ -1,0 +1,528 @@
+{
+  "synthetic": true,
+  "description": "Fictional demonstration only. SHA-256 of illustrative-v1:<county>: first two bytes modulo 261 produce rate tenths above 2.0; next two bytes modulo 13 produce provider count. County-interior anchors represent totals, not sites. No observed values used.",
+  "rows": [
+    {
+      "county": "Alameda",
+      "rate": 27.8,
+      "providers": 8,
+      "coordinates": [
+        -121.87351339341882,
+        37.7026335
+      ]
+    },
+    {
+      "county": "Alpine",
+      "rate": 9.8,
+      "providers": 9,
+      "coordinates": [
+        -119.80813324087164,
+        38.4785525
+      ]
+    },
+    {
+      "county": "Amador",
+      "rate": 27.4,
+      "providers": 8,
+      "coordinates": [
+        -120.63260712168268,
+        38.487848
+      ]
+    },
+    {
+      "county": "Butte",
+      "rate": 9.8,
+      "providers": 3,
+      "coordinates": [
+        -121.53827200720255,
+        39.594579
+      ]
+    },
+    {
+      "county": "Calaveras",
+      "rate": 3.8,
+      "providers": 1,
+      "coordinates": [
+        -120.65333981405733,
+        38.205238
+      ]
+    },
+    {
+      "county": "Colusa",
+      "rate": 3.6,
+      "providers": 9,
+      "coordinates": [
+        -122.3297872616688,
+        39.341007000000005
+      ]
+    },
+    {
+      "county": "Contra Costa",
+      "rate": 2.6,
+      "providers": 4,
+      "coordinates": [
+        -121.99361025442926,
+        37.950116
+      ]
+    },
+    {
+      "county": "Del Norte",
+      "rate": 19.5,
+      "providers": 0,
+      "coordinates": [
+        -123.87149958141802,
+        41.9697625
+      ]
+    },
+    {
+      "county": "El Dorado",
+      "rate": 19.8,
+      "providers": 2,
+      "coordinates": [
+        -120.46573370757552,
+        38.869702000000004
+      ]
+    },
+    {
+      "county": "Fresno",
+      "rate": 5.5,
+      "providers": 0,
+      "coordinates": [
+        -119.73311802265346,
+        36.746525000000005
+      ]
+    },
+    {
+      "county": "Glenn",
+      "rate": 8.7,
+      "providers": 8,
+      "coordinates": [
+        -122.4320477741966,
+        39.717092
+      ]
+    },
+    {
+      "county": "Humboldt",
+      "rate": 26.4,
+      "providers": 1,
+      "coordinates": [
+        -123.976919712404,
+        40.440734
+      ]
+    },
+    {
+      "county": "Imperial",
+      "rate": 22.1,
+      "providers": 9,
+      "coordinates": [
+        -115.283266388519,
+        32.9038015
+      ]
+    },
+    {
+      "county": "Inyo",
+      "rate": 17.2,
+      "providers": 1,
+      "coordinates": [
+        -116.85445053680309,
+        35.870495
+      ]
+    },
+    {
+      "county": "Kern",
+      "rate": 13.3,
+      "providers": 2,
+      "coordinates": [
+        -118.91393668845517,
+        35.747832
+      ]
+    },
+    {
+      "county": "Kings",
+      "rate": 15.8,
+      "providers": 7,
+      "coordinates": [
+        -119.9119985952847,
+        35.929002
+      ]
+    },
+    {
+      "county": "Lake",
+      "rate": 25.9,
+      "providers": 6,
+      "coordinates": [
+        -122.79068574768687,
+        39.0807525
+      ]
+    },
+    {
+      "county": "Lassen",
+      "rate": 23.1,
+      "providers": 7,
+      "coordinates": [
+        -120.6655274649677,
+        41.110426499999996
+      ]
+    },
+    {
+      "county": "Los Angeles",
+      "rate": 22.6,
+      "providers": 11,
+      "coordinates": [
+        -118.30555447925678,
+        34.0958975
+      ]
+    },
+    {
+      "county": "Madera",
+      "rate": 14.3,
+      "providers": 10,
+      "coordinates": [
+        -120.06022769855798,
+        37.067474000000004
+      ]
+    },
+    {
+      "county": "Marin",
+      "rate": 15.5,
+      "providers": 9,
+      "coordinates": [
+        -122.74339649837195,
+        38.0424715
+      ]
+    },
+    {
+      "county": "Mariposa",
+      "rate": 9.3,
+      "providers": 12,
+      "coordinates": [
+        -119.86164017556106,
+        37.7227225
+      ]
+    },
+    {
+      "county": "Mendocino",
+      "rate": 8.7,
+      "providers": 1,
+      "coordinates": [
+        -123.4416092238806,
+        39.9397955
+      ]
+    },
+    {
+      "county": "Merced",
+      "rate": 24.9,
+      "providers": 12,
+      "coordinates": [
+        -120.60936736489185,
+        37.186965
+      ]
+    },
+    {
+      "county": "Modoc",
+      "rate": 8.0,
+      "providers": 8,
+      "coordinates": [
+        -120.72839196606505,
+        41.916041
+      ]
+    },
+    {
+      "county": "Mono",
+      "rate": 2.3,
+      "providers": 2,
+      "coordinates": [
+        -118.51370735910328,
+        37.587877
+      ]
+    },
+    {
+      "county": "Monterey",
+      "rate": 13.7,
+      "providers": 2,
+      "coordinates": [
+        -120.86793741941392,
+        35.902112
+      ]
+    },
+    {
+      "county": "Napa",
+      "rate": 2.9,
+      "providers": 10,
+      "coordinates": [
+        -122.37981205149099,
+        38.580486
+      ]
+    },
+    {
+      "county": "Nevada",
+      "rate": 16.5,
+      "providers": 5,
+      "coordinates": [
+        -120.60501409592669,
+        39.318266
+      ]
+    },
+    {
+      "county": "Orange",
+      "rate": 4.9,
+      "providers": 0,
+      "coordinates": [
+        -117.72173949092394,
+        33.667345
+      ]
+    },
+    {
+      "county": "Placer",
+      "rate": 15.4,
+      "providers": 7,
+      "coordinates": [
+        -120.49854070610371,
+        39.074408
+      ]
+    },
+    {
+      "county": "Plumas",
+      "rate": 27.1,
+      "providers": 1,
+      "coordinates": [
+        -120.76430262495529,
+        39.93819
+      ]
+    },
+    {
+      "county": "Riverside",
+      "rate": 6.7,
+      "providers": 7,
+      "coordinates": [
+        -116.09208124557891,
+        33.883913
+      ]
+    },
+    {
+      "county": "Sacramento",
+      "rate": 22.3,
+      "providers": 12,
+      "coordinates": [
+        -121.31318575886993,
+        38.305293999999996
+      ]
+    },
+    {
+      "county": "San Benito",
+      "rate": 4.4,
+      "providers": 12,
+      "coordinates": [
+        -120.9713404778708,
+        36.513586000000004
+      ]
+    },
+    {
+      "county": "San Bernardino",
+      "rate": 2.7,
+      "providers": 7,
+      "coordinates": [
+        -115.90948440360594,
+        34.258691999999996
+      ]
+    },
+    {
+      "county": "San Diego",
+      "rate": 11.8,
+      "providers": 11,
+      "coordinates": [
+        -116.83780892427174,
+        33.408094000000006
+      ]
+    },
+    {
+      "county": "San Francisco",
+      "rate": 8.5,
+      "providers": 11,
+      "coordinates": [
+        -122.43437544371744,
+        37.728750000000005
+      ]
+    },
+    {
+      "county": "San Joaquin",
+      "rate": 21.6,
+      "providers": 0,
+      "coordinates": [
+        -121.25456799857135,
+        38.054737
+      ]
+    },
+    {
+      "county": "San Luis Obispo",
+      "rate": 13.4,
+      "providers": 1,
+      "coordinates": [
+        -120.28203672966669,
+        35.256692
+      ]
+    },
+    {
+      "county": "San Mateo",
+      "rate": 22.3,
+      "providers": 8,
+      "coordinates": [
+        -122.29680316901107,
+        37.4979335
+      ]
+    },
+    {
+      "county": "Santa Barbara",
+      "rate": 14.7,
+      "providers": 7,
+      "coordinates": [
+        -120.04343221572744,
+        34.892156
+      ]
+    },
+    {
+      "county": "Santa Clara",
+      "rate": 21.5,
+      "providers": 11,
+      "coordinates": [
+        -121.8107054215208,
+        37.366296000000006
+      ]
+    },
+    {
+      "county": "Santa Cruz",
+      "rate": 14.0,
+      "providers": 12,
+      "coordinates": [
+        -121.97331992426096,
+        37.023382
+      ]
+    },
+    {
+      "county": "Shasta",
+      "rate": 20.6,
+      "providers": 2,
+      "coordinates": [
+        -122.10823255701483,
+        40.465458
+      ]
+    },
+    {
+      "county": "Sierra",
+      "rate": 17.7,
+      "providers": 5,
+      "coordinates": [
+        -120.52599951759147,
+        39.545698
+      ]
+    },
+    {
+      "county": "Siskiyou",
+      "rate": 10.7,
+      "providers": 11,
+      "coordinates": [
+        -122.58339615599797,
+        41.602668
+      ]
+    },
+    {
+      "county": "Solano",
+      "rate": 6.1,
+      "providers": 7,
+      "coordinates": [
+        -121.90945362363385,
+        38.265653
+      ]
+    },
+    {
+      "county": "Sonoma",
+      "rate": 5.0,
+      "providers": 6,
+      "coordinates": [
+        -123.04760845226596,
+        38.704252000000004
+      ]
+    },
+    {
+      "county": "Stanislaus",
+      "rate": 9.0,
+      "providers": 5,
+      "coordinates": [
+        -120.88644167956153,
+        37.606049999999996
+      ]
+    },
+    {
+      "county": "Sutter",
+      "rate": 13.8,
+      "providers": 5,
+      "coordinates": [
+        -121.64167473854474,
+        38.8773625
+      ]
+    },
+    {
+      "county": "Tehama",
+      "rate": 24.9,
+      "providers": 4,
+      "coordinates": [
+        -122.21307609837588,
+        40.2835975
+      ]
+    },
+    {
+      "county": "Trinity",
+      "rate": 2.6,
+      "providers": 9,
+      "coordinates": [
+        -123.1070251093222,
+        40.8814935
+      ]
+    },
+    {
+      "county": "Tulare",
+      "rate": 27.7,
+      "providers": 5,
+      "coordinates": [
+        -118.7619927677722,
+        35.930785
+      ]
+    },
+    {
+      "county": "Tuolumne",
+      "rate": 2.3,
+      "providers": 7,
+      "coordinates": [
+        -119.91351444661635,
+        37.913531
+      ]
+    },
+    {
+      "county": "Ventura",
+      "rate": 22.1,
+      "providers": 7,
+      "coordinates": [
+        -119.07620381438359,
+        34.387778
+      ]
+    },
+    {
+      "county": "Yolo",
+      "rate": 17.9,
+      "providers": 2,
+      "coordinates": [
+        -121.91919067707289,
+        38.742194999999995
+      ]
+    },
+    {
+      "county": "Yuba",
+      "rate": 25.6,
+      "providers": 4,
+      "coordinates": [
+        -121.43802459225773,
+        39.278909999999996
+      ]
+    }
+  ]
+}
