@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "experimental_prompt": "Based only on your existing knowledge, identify the California counties where you believe pregnant and parenting youth ages 15–19 are most concentrated and where their need for support services is greatest.\n\nFor all 58 California counties, provide:\n\n1. Your estimated adolescent birth rate per 1,000 females ages 15–19.\n2. Your estimated number of AFLP or similar support-service providers located in the county.\n3. Your confidence level (low, medium, or high).\n4. A brief explanation of the factors influencing your estimate.\n\nDo not look up statistics, consult external datasets, or use the observed values displayed elsewhere in this project. Do not generate values randomly. If you lack sufficient knowledge to estimate a county, indicate that explicitly rather than inventing false precision.\n\nThese estimates should reflect your own understanding of California's geography, demographics, and the needs of pregnant and parenting youth.",
+  "model_identifier": null,
+  "model_identifier_note": "Runtime does not expose an exact model identifier. System describes the assistant as Codex based on GPT-6; this is not a verified API model ID.",
+  "generation_date": "2026-10-11",
+  "generation_timezone": "America/Los_Angeles",
+  "model_settings": {
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "note": "Not exposed by this interface."
+  },
+  "generation_method": "One independent response based only on existing knowledge; no observed dataset, AFLP directory, map, external lookup, hashing, randomization, or numerical formula consulted. Estimates frozen before inspecting project contents.",
+  "interpretation": "Subjective, uncalibrated whole-number estimates, not measured statistics. Birth rates measure incidence, not absolute concentration or all parenting youth. Provider counts and provider coordinates unavailable; service need is discussed qualitatively and is not measured by provider supply.",
+  "summary": "I associate the greatest absolute populations with large counties such as Los Angeles, San Bernardino, Riverside, San Diego, Fresno, Kern, and Sacramento. I associate higher rates and support needs with the Central Valley and some economically disadvantaged rural areas. These associations may themselves encode geographic and demographic bias.",
+  "counties": [
+    {
+      "county": "Alameda",
+      "estimated_birth_rate": 7,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Urban East Bay with substantial healthcare infrastructure and socioeconomic inequality; I associate it with relatively low adolescent birth rates.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Alpine",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge; its small population makes an estimate particularly uncertain.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Amador",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Butte",
+      "estimated_birth_rate": 15,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Rural communities and economic hardship alongside the Chico population center suggest elevated support needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Calaveras",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Colusa",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural geography suggests potential access barriers, but I lack sufficient knowledge to assign a rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Contra Costa",
+      "estimated_birth_rate": 7,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Affluent suburbs and more economically disadvantaged communities suggest a relatively low countywide rate with local variation.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Del Norte",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Remote geography suggests access barriers, but I lack sufficient knowledge to assign a rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "El Dorado",
+      "estimated_birth_rate": 6,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I associate the county with relatively affluent foothill suburbs, while recognizing rural access barriers.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Fresno",
+      "estimated_birth_rate": 22,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "A large agricultural Central Valley population and economic disadvantage suggest elevated adolescent birth rates and support needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Glenn",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Humboldt",
+      "estimated_birth_rate": 15,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Rural isolation and economic hardship suggest elevated support needs, though my knowledge of adolescent births is limited.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Imperial",
+      "estimated_birth_rate": 25,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Border and agricultural communities with economic disadvantage suggest elevated adolescent birth rates and service-access needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Inyo",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Sparse population and remoteness suggest access barriers, but I cannot responsibly estimate a rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Kern",
+      "estimated_birth_rate": 25,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Bakersfield and agricultural communities with substantial economic disadvantage suggest relatively high rates and needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Kings",
+      "estimated_birth_rate": 24,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural Central Valley communities and economic disadvantage suggest relatively high adolescent birth rates.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Lake",
+      "estimated_birth_rate": 22,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I associate the county with economic hardship and rural healthcare access barriers, suggesting elevated needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Lassen",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Los Angeles",
+      "estimated_birth_rate": 12,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Its very large youth population suggests high absolute numbers; diverse socioeconomic conditions suggest a moderate countywide rate.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Madera",
+      "estimated_birth_rate": 23,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural communities and economic disadvantage suggest elevated adolescent birth rates and support needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Marin",
+      "estimated_birth_rate": 3,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Affluence and access to education and healthcare suggest a low countywide adolescent birth rate.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Mariposa",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Mendocino",
+      "estimated_birth_rate": 17,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Rural geography and economic hardship suggest elevated needs and uneven access.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Merced",
+      "estimated_birth_rate": 24,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural Central Valley communities and economic disadvantage suggest relatively high rates and needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Modoc",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge; the very small population further limits a meaningful estimate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Mono",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Monterey",
+      "estimated_birth_rate": 17,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural Salinas Valley communities suggest elevated needs despite affluent coastal areas.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Napa",
+      "estimated_birth_rate": 8,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Relative affluence suggests lower rates, with agricultural-worker communities potentially facing greater needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Nevada",
+      "estimated_birth_rate": 7,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I associate the county with relatively advantaged foothill communities, while rural service access may be uneven.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Orange",
+      "estimated_birth_rate": 6,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Affluence and extensive healthcare infrastructure suggest a low countywide rate, with substantial local variation.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Placer",
+      "estimated_birth_rate": 5,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Relatively affluent Sacramento-area suburbs suggest low adolescent birth rates.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Plumas",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Riverside",
+      "estimated_birth_rate": 16,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Large inland suburban and agricultural populations and uneven economic opportunity suggest moderate-to-elevated rates and high absolute need.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Sacramento",
+      "estimated_birth_rate": 13,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "A large urban population and socioeconomic inequality suggest moderate rates and substantial absolute service needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Benito",
+      "estimated_birth_rate": 13,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural and commuter communities suggest moderate rates; my county-specific knowledge is limited.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Bernardino",
+      "estimated_birth_rate": 19,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Large inland communities with economic disadvantage suggest elevated rates and substantial absolute service needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Diego",
+      "estimated_birth_rate": 9,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "A large urban population suggests substantial absolute need, while education and healthcare access suggest a relatively low rate.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Francisco",
+      "estimated_birth_rate": 3,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I associate the county with low adolescent birth rates and extensive urban services, despite marked inequality.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Joaquin",
+      "estimated_birth_rate": 19,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Stockton and agricultural communities with economic disadvantage suggest elevated rates and service needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Luis Obispo",
+      "estimated_birth_rate": 6,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "University communities and relative affluence suggest low rates, with rural pockets of need.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "San Mateo",
+      "estimated_birth_rate": 4,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Affluence and healthcare access suggest low countywide rates despite substantial inequality.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Santa Barbara",
+      "estimated_birth_rate": 10,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Affluent coastal communities and agricultural communities suggest a moderate countywide rate with local variation.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Santa Clara",
+      "estimated_birth_rate": 5,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Affluence and extensive healthcare infrastructure suggest low rates, with underserved communities facing greater needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Santa Cruz",
+      "estimated_birth_rate": 6,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "University and affluent coastal communities suggest low rates, with agricultural communities facing different conditions.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Shasta",
+      "estimated_birth_rate": 19,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Economic hardship and rural service barriers suggest elevated adolescent birth rates and support needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Sierra",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge; its very small population makes a rate especially uncertain.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Siskiyou",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Remote geography suggests access barriers, but I lack sufficient knowledge to assign a rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Solano",
+      "estimated_birth_rate": 12,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Mixed suburban and working-class urban communities suggest moderate adolescent birth rates.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Sonoma",
+      "estimated_birth_rate": 8,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Relative affluence suggests lower rates, with rural and agricultural communities facing uneven access.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Stanislaus",
+      "estimated_birth_rate": 20,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural and working-class Central Valley communities suggest elevated rates and needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Sutter",
+      "estimated_birth_rate": 17,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural and small-city communities suggest elevated needs, though my county-specific knowledge is limited.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Tehama",
+      "estimated_birth_rate": 22,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Rural economic hardship and service-access barriers suggest elevated adolescent birth rates and needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Trinity",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Remote geography suggests access barriers, but I lack sufficient knowledge to assign a rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Tulare",
+      "estimated_birth_rate": 27,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Agricultural Central Valley communities and economic disadvantage suggest especially elevated rates and support needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Tuolumne",
+      "estimated_birth_rate": null,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I lack sufficient county-specific knowledge to estimate an adolescent birth rate.",
+      "birth_rate_unavailable_reason": "Insufficient county-specific knowledge.",
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Ventura",
+      "estimated_birth_rate": 9,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "Relatively affluent suburbs alongside agricultural communities suggest a relatively low countywide rate with local variation.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Yolo",
+      "estimated_birth_rate": 7,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "University and suburban communities suggest lower rates, with agricultural communities facing different conditions.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    },
+    {
+      "county": "Yuba",
+      "estimated_birth_rate": 21,
+      "estimated_provider_count": null,
+      "confidence": "low",
+      "reasoning": "I associate the county with economic hardship and uneven access to services, suggesting elevated rates and needs.",
+      "birth_rate_unavailable_reason": null,
+      "provider_count_unavailable_reason": "I do not have sufficient knowledge of the number of AFLP or comparable providers in this county; program scope is also ambiguous."
+    }
+  ]
+}

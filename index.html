@@ -19,20 +19,20 @@
       <h1>Adolescent Birth Rates and AFLP Services in California</h1>
       <section class="question" aria-labelledby="question-heading">
         <h2 id="question-heading">Research question</h2>
-        <p>How do adolescent birth rates vary across California counties, and how does the geographic distribution of publicly listed AFLP services compare with these patterns?</p>
+        <p>When AI models visualize pregnant and parenting youth, do they prioritize larger urban counties, and how well do their representations align with adolescent birth data and support services?</p>
       </section>
       <p class="intro">County birth rates from the California Department of Public Health (CDPH), compared with its publicly listed Adolescent Family Life Program (AFLP) locations. County boundaries are from the California Department of Technology.</p>
     </header>
 
     <section class="comparison" aria-labelledby="comparison-heading">
       <div class="comparison-heading">
-        <div><h2 id="comparison-heading">Two views of adolescent health</h2><p>Compare the saved observations with a fictional provider scenario.</p></div>
+        <div><h2 id="comparison-heading">Two views of adolescent health</h2><p>Compare observed rates with an independently generated AI response.</p></div>
         <button id="reset-maps" type="button">Reset both maps</button>
       </div>
-      <p class="comparison-note">Pan and zoom either map to move both. The right-hand map uses invented values; it is not a prediction or an estimate of actual need.</p>
+      <p class="comparison-note">Pan and zoom either map to move both. Both maps share color thresholds and synchronized scales. AI estimates were saved before inspecting the evaluation data.</p>
       <div class="map-grid">
     <section class="map-section" aria-labelledby="map-heading">
-      <div class="map-heading"><div><h2 id="map-heading">County birth rates &amp; program locations</h2><p>2024 · Ages 15–19 · Live births per 1,000 females</p></div><span class="tag">Observed</span></div>
+      <div class="map-heading"><div><h2 id="map-heading">Observed California Data (CDPH, 2024)</h2><p>2024 · Ages 15–19 · Live births per 1,000 females</p></div><span class="tag">Observed</span></div>
       <p id="status" role="status">Loading county data and AFLP locations…</p>
       <div class="map-wrap">
         <div id="map" aria-label="Interactive map of California adolescent birth rates and AFLP locations"></div>
@@ -43,18 +43,13 @@
       <p class="map-note">Click a county or point for details. Gray counties have missing or suppressed rates. Points are directory mailing addresses, not service areas.</p>
     </section>
     <section class="map-section scenario-section" aria-labelledby="scenario-heading">
-      <div class="map-heading"><div><h2 id="scenario-heading">Birth rates &amp; provider distribution</h2><p>Invented rates and county provider counts · Ages 15–19</p></div><span class="tag synthetic-tag">Synthetic</span></div>
-      <p id="scenario-status" class="map-status" role="status">Loading illustrative scenario…</p>
+      <div class="map-heading"><div><h2 id="scenario-heading">AI-Generated Representation</h2><p>Independent knowledge-based estimates · Ages 15–19</p></div><span class="tag ai-tag">AI · Low confidence</span></div>
+      <p id="scenario-status" class="map-status" role="status">Loading saved AI representation…</p>
       <div class="map-wrap">
-        <div id="scenario-map" class="map-canvas" aria-label="Interactive synthetic map of invented adolescent birth rates and provider counts"></div>
-        <aside id="scenario-access-hover" class="access-hover" aria-label="Nearest fictional hub"><strong>Nearest fictional hub</strong><p>Hover anywhere on the map, or tap, to estimate distance and time.</p></aside>
+        <div id="scenario-map" class="map-canvas" aria-label="Interactive map of AI-estimated adolescent birth rates"></div>
+        <aside class="access-hover" aria-label="AI provider estimates unavailable"><strong>Provider distribution unavailable</strong><p>The model lacked sufficient knowledge to estimate provider counts or locations. No symbols means unavailable, not zero. AI accessibility cannot be calculated.</p></aside>
       </div>
-      <div class="card-key bubble-key" aria-label="Circle area represents invented provider count">
-        <strong>Invented providers per county</strong>
-        <span><i style="--diameter:10px"></i>1</span><span><i style="--diameter:20px"></i>4</span><span><i style="--diameter:34.64px"></i>12</span>
-        <span>No circle = 0</span>
-      </div>
-      <p class="map-note">Darker counties show higher invented birth rates; larger circles show more invented providers. Circles summarize counties, not actual site locations. All values are fictional and have no reference year.</p>
+      <p class="map-note">All estimates have low confidence. Gray counties have no AI rate estimate. Click a county for the model’s reasoning. These subjective estimates have no target reference year and are not measured outcomes.</p>
     </section>
       </div>
       <div class="legend" aria-label="Shared birth-rate legend">
@@ -69,46 +64,29 @@
       </div>
       <section class="access-summary" aria-labelledby="access-heading">
         <h2 id="access-heading">How far is the nearest provider?</h2>
-        <p>Hover anywhere on either map or tap a location. Time is an <strong>illustrative estimate: straight-line miles ÷ 30 mph</strong>, not driving directions. It ignores roads, traffic, terrain and service eligibility. Offshore points also use straight-line distance.</p>
+        <p>Hover on the observed map or tap a location. Time is an <strong>illustrative estimate: straight-line miles ÷ 30 mph</strong>, not driving directions. It ignores roads, traffic, terrain and service eligibility. Offshore points also use straight-line distance.</p>
         <label for="access-county">Explore a county</label>
         <select id="access-county"><option value="">Choose a county…</option></select>
         <p id="access-county-detail" role="status">Choose a county to compare its average distance to the nearest provider.</p>
         <details>
           <summary>All county averages and method</summary>
-          <p>We sample a 24 × 24 grid across each county’s bounding box, retain points within its boundaries, and average each point’s distance to its nearest provider anywhere in the saved California dataset. Latitude weights approximate land-area weighting; these are not population-weighted distances. Small islands may be missed. The synthetic map treats each county circle with a nonzero provider count as one fictional hub; its providers are assumed to share that location.</p>
-          <div class="table-scroll"><table><caption>Average straight-line distance to nearest provider (miles)</caption><thead><tr><th scope="col">County</th><th scope="col">Listed AFLP</th><th scope="col">Fictional hubs</th></tr></thead><tbody id="access-rows"></tbody></table></div>
+          <p>We sample a 24 × 24 grid across each county’s bounding box, retain points within its boundaries, and average each point’s distance to its nearest provider anywhere in the saved California dataset. Latitude weights approximate land-area weighting; these are not population-weighted distances. Small islands may be missed. AI distances are unavailable because no provider locations were estimated.</p>
+          <div class="table-scroll"><table><caption>Average straight-line distance to nearest provider (miles)</caption><thead><tr><th scope="col">County</th><th scope="col">Listed AFLP</th><th scope="col">AI distance (unavailable)</th></tr></thead><tbody id="access-rows"></tbody></table></div>
         </details>
       </section>
-      <details class="scenario-data">
-        <summary>View all synthetic county values and how they were made</summary>
-        <p>Each county is assigned a reproducible fictional birth rate from 2.0 to 28.0 and 0–12 fictional providers. Values are generated independently from the county name, without using observed birth rates, population, or real provider locations. These counts do not measure capacity or access and imply no causal relationship. Only the existing county boundaries are reused.</p>
-        <div class="table-scroll"><table><caption>Synthetic scenario — all values invented</caption><thead><tr><th scope="col">County</th><th scope="col">Births per 1,000</th><th scope="col">Providers</th></tr></thead><tbody id="scenario-rows"></tbody></table></div>
-      </details>
+      <section class="scenario-data" aria-labelledby="bias-heading">
+        <h2 id="bias-heading">Geographic bias comparison</h2>
+        <p id="bias-summary" role="status">Calculating paired differences…</p>
+        <p>Positive differences indicate AI overestimation; negative differences indicate underestimation. Rates do not measure absolute concentration. Missing estimates can also reflect geographic knowledge gaps. Provider counts below count listed directory locations, not service capacity; “similar services” is broader than AFLP, so the two measures would require harmonization.</p>
+        <div class="table-scroll"><table><caption>All 58 counties · differences in births per 1,000 females ages 15–19</caption><thead><tr><th scope="col">County</th><th scope="col">Observed rate (2024)</th><th scope="col">AI rate</th><th scope="col">AI − observed</th><th scope="col">Listed AFLP locations</th><th scope="col">AI providers</th><th scope="col">AI confidence</th><th scope="col">AI reasoning</th></tr></thead><tbody id="scenario-rows"></tbody></table></div>
+      </section>
     </section>
-
     <section class="ai-explanation" aria-labelledby="ai-explanation-heading">
-      <p class="eyebrow">AI visualization · Design rationale</p>
-      <h2 id="ai-explanation-heading">Why the maps are shown this way</h2>
-      <p class="ai-explanation-intro">This visualization is designed to explore how adolescent birth rates and provider distribution relate geographically. The observed map uses the saved data; the AI-created scenario demonstrates a way to compare patterns using invented values. It does not identify where providers should be placed.</p>
-      <div class="explanation-grid">
-        <article>
-          <h3>Color shows rates; circles show providers</h3>
-          <p>County shading makes differences in birth rates visible across California. Both maps use the same color thresholds so the same shade always means the same rate range. On the observed map, each dot is a listed AFLP address. On the synthetic map, circle area represents an invented provider count, letting viewers compare rates and counts without combining them into an unexplained score.</p>
-        </article>
-        <article>
-          <h3>The fictional pattern is a demonstration</h3>
-          <p>Synthetic rates and provider counts were assigned independently using a repeatable county-name-based method. They were not inferred from a county’s residents, health outcomes, or actual services. A dark county with a small circle illustrates what higher rates alongside fewer providers could look like; it is not evidence that this county is underserved.</p>
-        </article>
-        <article>
-          <h3>Distance adds a different perspective</h3>
-          <p>A provider count alone does not show how far someone may need to travel. The hover box measures distance from the selected point to the nearest mapped provider, including across county lines. The county average samples locations throughout the county rather than measuring only from its center. This describes geographic proximity, not the average experience of residents.</p>
-        </article>
-        <article>
-          <h3>The assumptions matter</h3>
-          <p>Hover times assume straight-line travel at 30 mph, so they are illustrative rather than driving estimates. Synthetic circles act as fictional hubs, with all providers in a county assumed to share one location. Actual access also depends on roads, transportation, cost, eligibility, and provider capacity—information these maps do not contain.</p>
-        </article>
-      </div>
-      <p class="explanation-takeaway"><strong>How to interpret the comparison:</strong> Use it to ask where closer investigation might be useful. Higher birth rates, fewer providers, or longer distances can suggest questions to explore, but these maps alone cannot establish unmet need or show that provider availability causes birth rates to change.</p>
+      <h2 id="ai-explanation-heading">Experimental provenance and interpretation</h2>
+      <p>The response was generated October 11, 2026 using existing model knowledge, before opening project data or maps. Its county estimates remain unchanged after comparison. <a href="./data/ai-representation.json">Download the full response, exact prompt, and metadata</a>.</p>
+      <p>The interface does not expose an exact model identifier, temperature, seed, or top-p; those metadata fields are explicitly null. The assistant is described as Codex based on GPT-6, which is not a verified API model identifier.</p>
+      <p>The model associated large urban counties with greater absolute numbers, and Central Valley and some rural counties with higher rates and support needs. These associations may encode stereotypes. This single response cannot establish a general urban bias across models. Testing that claim requires repeated independent responses, an explicit urban classification, and population denominators to separate rates from absolute numbers.</p>
+      <p>All confidence labels are self-reported and uncalibrated. Unknown provider counts are not zeros. No locations were fabricated to calculate AI accessibility. Observed accessibility still uses the original area-weighted grid and straight-line distance method.</p>
     </section>
 
     <section class="sources" aria-labelledby="sources-heading">

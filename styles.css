@@ -14,7 +14,7 @@ button:hover{background:#edf4f2}
 .map-heading{align-items:flex-start;min-height:108px;padding:20px 20px 8px;gap:10px}
 .map-heading h2{font-size:17px}
 .tag{white-space:nowrap}
-.synthetic-tag{background:#f6e9d8;color:#815021}
+.ai-tag{background:#f6e9d8;color:#815021}
 #status,.map-status{margin:0;padding:0 20px 14px;font-size:12px;line-height:1.6;color:#576660;min-height:53px}
 #status.error,.map-status.error{color:#8b351e}
 #map,.map-canvas{width:100%;height:600px;background:#f0f2ef}
