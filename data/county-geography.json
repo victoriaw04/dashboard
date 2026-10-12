@@ -1,0 +1,491 @@
+{
+  "provenance": {
+    "retrieved_date": "2026-10-11",
+    "source_title": "USDA Economic Research Service, 2023 Rural-Urban Continuum Codes",
+    "source_url": "https://ers.usda.gov/media/5768/2023-rural-urban-continuum-codes.csv?v=22651",
+    "source_landing_url": "https://ers.usda.gov/data-products/rural-urban-continuum-codes",
+    "documentation_url": "https://ers.usda.gov/data-products/rural-urban-continuum-codes/documentation",
+    "file_last_updated": "2024-01-22",
+    "classification_vintage": 2023,
+    "classification_rule": "RUCC 1\u20133 = Urban/metro; 4\u20139 = Rural/nonmetro. County-level metro proxy, not Census urban residence.",
+    "population_source": "2020 Census Demographic and Housing Characteristics File, as distributed by USDA ERS",
+    "population_reference_date": "2020-04-01",
+    "population_unit": "Total county residents, all ages and sexes",
+    "national_csv_sha256": "ec455ee2a8bc5fc8e070575ea5bee7dce46fc6037f8c3449cbf56e8b45331fa7",
+    "california_csv_sha256": "e7e3636868bfe6c19a5ade6056f2c8f43d388c5b3bf1b5c9ffc0529bc6e2569a",
+    "processing": "Archive original header and all FIPS 06 rows byte-for-byte; pivot Attribute/Value by five-digit FIPS; parse RUCC_2023 and Population_2020 as integers; join boundary CENSUS_GEOID; assert 58 one-to-one county matches. Region assignments are transcribed from the cited county lists and validated for exhaustive, disjoint coverage. No imputation or alteration of experimental inputs."
+  },
+  "region_source": {
+    "title": "Caltrans 2020 California County-Level Economic Forecast, Regional Definitions, printed page 4 (PDF page 5)",
+    "url": "https://dot.ca.gov/-/media/dot-media/programs/transportation-planning/documents/new-state-planning/transportation-economics/socioeconomic-forecasts/2020/2020-methodology-and-introduction/county-level-forecasts-intro-2020-a11y.pdf",
+    "publication_date": "2020-10",
+    "retrieved_date": "2026-10-11",
+    "method": "Transcribed county membership from the seven published regional lists; these are descriptive economic regions, not clinical or vulnerability classifications."
+  },
+  "rows": [
+    {
+      "county": "Alameda",
+      "fips": "06001",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 1682353,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Alpine",
+      "fips": "06003",
+      "rucc_2023": 8,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 1204,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Amador",
+      "fips": "06005",
+      "rucc_2023": 6,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 40474,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Butte",
+      "fips": "06007",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 211632,
+      "region": "Northern California"
+    },
+    {
+      "county": "Calaveras",
+      "fips": "06009",
+      "rucc_2023": 6,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 45292,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Colusa",
+      "fips": "06011",
+      "rucc_2023": 6,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 21839,
+      "region": "Northern California"
+    },
+    {
+      "county": "Contra Costa",
+      "fips": "06013",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 1165927,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Del Norte",
+      "fips": "06015",
+      "rucc_2023": 7,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 27743,
+      "region": "Northern California"
+    },
+    {
+      "county": "El Dorado",
+      "fips": "06017",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 191185,
+      "region": "Sacramento Valley"
+    },
+    {
+      "county": "Fresno",
+      "fips": "06019",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 1008654,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Glenn",
+      "fips": "06021",
+      "rucc_2023": 6,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 28917,
+      "region": "Northern California"
+    },
+    {
+      "county": "Humboldt",
+      "fips": "06023",
+      "rucc_2023": 5,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 136463,
+      "region": "Northern California"
+    },
+    {
+      "county": "Imperial",
+      "fips": "06025",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 179702,
+      "region": "Southern California"
+    },
+    {
+      "county": "Inyo",
+      "fips": "06027",
+      "rucc_2023": 6,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 19016,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Kern",
+      "fips": "06029",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 909235,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Kings",
+      "fips": "06031",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 152486,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Lake",
+      "fips": "06033",
+      "rucc_2023": 4,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 68163,
+      "region": "Northern California"
+    },
+    {
+      "county": "Lassen",
+      "fips": "06035",
+      "rucc_2023": 7,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 32730,
+      "region": "Northern California"
+    },
+    {
+      "county": "Los Angeles",
+      "fips": "06037",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 10014009,
+      "region": "Southern California"
+    },
+    {
+      "county": "Madera",
+      "fips": "06039",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 156255,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Marin",
+      "fips": "06041",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 262321,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Mariposa",
+      "fips": "06043",
+      "rucc_2023": 8,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 17131,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Mendocino",
+      "fips": "06045",
+      "rucc_2023": 4,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 91601,
+      "region": "Northern California"
+    },
+    {
+      "county": "Merced",
+      "fips": "06047",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 281202,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Modoc",
+      "fips": "06049",
+      "rucc_2023": 8,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 8700,
+      "region": "Northern California"
+    },
+    {
+      "county": "Mono",
+      "fips": "06051",
+      "rucc_2023": 7,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 13195,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Monterey",
+      "fips": "06053",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 439035,
+      "region": "Central Coast"
+    },
+    {
+      "county": "Napa",
+      "fips": "06055",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 138019,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Nevada",
+      "fips": "06057",
+      "rucc_2023": 4,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 102241,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Orange",
+      "fips": "06059",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 3186989,
+      "region": "Southern California"
+    },
+    {
+      "county": "Placer",
+      "fips": "06061",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 404739,
+      "region": "Sacramento Valley"
+    },
+    {
+      "county": "Plumas",
+      "fips": "06063",
+      "rucc_2023": 9,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 19790,
+      "region": "Northern California"
+    },
+    {
+      "county": "Riverside",
+      "fips": "06065",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 2418185,
+      "region": "Southern California"
+    },
+    {
+      "county": "Sacramento",
+      "fips": "06067",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 1585055,
+      "region": "Sacramento Valley"
+    },
+    {
+      "county": "San Benito",
+      "fips": "06069",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 64209,
+      "region": "Central Coast"
+    },
+    {
+      "county": "San Bernardino",
+      "fips": "06071",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 2181654,
+      "region": "Southern California"
+    },
+    {
+      "county": "San Diego",
+      "fips": "06073",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 3298634,
+      "region": "Southern California"
+    },
+    {
+      "county": "San Francisco",
+      "fips": "06075",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 873965,
+      "region": "Bay Area"
+    },
+    {
+      "county": "San Joaquin",
+      "fips": "06077",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 779233,
+      "region": "Central Valley"
+    },
+    {
+      "county": "San Luis Obispo",
+      "fips": "06079",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 282424,
+      "region": "Central Coast"
+    },
+    {
+      "county": "San Mateo",
+      "fips": "06081",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 764442,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Santa Barbara",
+      "fips": "06083",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 448229,
+      "region": "Central Coast"
+    },
+    {
+      "county": "Santa Clara",
+      "fips": "06085",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 1936259,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Santa Cruz",
+      "fips": "06087",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 270861,
+      "region": "Central Coast"
+    },
+    {
+      "county": "Shasta",
+      "fips": "06089",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 182155,
+      "region": "Northern California"
+    },
+    {
+      "county": "Sierra",
+      "fips": "06091",
+      "rucc_2023": 8,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 3236,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Siskiyou",
+      "fips": "06093",
+      "rucc_2023": 7,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 44076,
+      "region": "Northern California"
+    },
+    {
+      "county": "Solano",
+      "fips": "06095",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 453491,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Sonoma",
+      "fips": "06097",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 488863,
+      "region": "Bay Area"
+    },
+    {
+      "county": "Stanislaus",
+      "fips": "06099",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 552878,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Sutter",
+      "fips": "06101",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 99633,
+      "region": "Sacramento Valley"
+    },
+    {
+      "county": "Tehama",
+      "fips": "06103",
+      "rucc_2023": 4,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 65829,
+      "region": "Northern California"
+    },
+    {
+      "county": "Trinity",
+      "fips": "06105",
+      "rucc_2023": 8,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 16112,
+      "region": "Northern California"
+    },
+    {
+      "county": "Tulare",
+      "fips": "06107",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 473117,
+      "region": "Central Valley"
+    },
+    {
+      "county": "Tuolumne",
+      "fips": "06109",
+      "rucc_2023": 4,
+      "urban_rural": "Rural/nonmetro",
+      "population_2020": 55620,
+      "region": "Sierra Region"
+    },
+    {
+      "county": "Ventura",
+      "fips": "06111",
+      "rucc_2023": 2,
+      "urban_rural": "Urban/metro",
+      "population_2020": 843843,
+      "region": "Southern California"
+    },
+    {
+      "county": "Yolo",
+      "fips": "06113",
+      "rucc_2023": 1,
+      "urban_rural": "Urban/metro",
+      "population_2020": 216403,
+      "region": "Sacramento Valley"
+    },
+    {
+      "county": "Yuba",
+      "fips": "06115",
+      "rucc_2023": 3,
+      "urban_rural": "Urban/metro",
+      "population_2020": 81575,
+      "region": "Sacramento Valley"
+    }
+  ]
+}

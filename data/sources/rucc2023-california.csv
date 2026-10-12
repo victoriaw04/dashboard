@@ -1,0 +1,175 @@
+FIPS,State,County_Name,Attribute,Value
+06001,CA,Alameda County,Population_2020,1682353
+06001,CA,Alameda County,RUCC_2023,1
+06001,CA,Alameda County,Description,Metro - Counties in metro areas of 1 million population or more
+06003,CA,Alpine County,Population_2020,1204
+06003,CA,Alpine County,RUCC_2023,8
+06003,CA,Alpine County,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
+06005,CA,Amador County,Population_2020,40474
+06005,CA,Amador County,RUCC_2023,6
+06005,CA,Amador County,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
+06007,CA,Butte County,Population_2020,211632
+06007,CA,Butte County,RUCC_2023,3
+06007,CA,Butte County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+06009,CA,Calaveras County,Population_2020,45292
+06009,CA,Calaveras County,RUCC_2023,6
+06009,CA,Calaveras County,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
+06011,CA,Colusa County,Population_2020,21839
+06011,CA,Colusa County,RUCC_2023,6
+06011,CA,Colusa County,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
+06013,CA,Contra Costa County,Population_2020,1165927
+06013,CA,Contra Costa County,RUCC_2023,1
+06013,CA,Contra Costa County,Description,Metro - Counties in metro areas of 1 million population or more
+06015,CA,Del Norte County,Population_2020,27743
+06015,CA,Del Norte County,RUCC_2023,7
+06015,CA,Del Norte County,Description,"Nonmetro - Urban population of 5,000 to 20,000, not adjacent to a metro area"
+06017,CA,El Dorado County,Population_2020,191185
+06017,CA,El Dorado County,RUCC_2023,1
+06017,CA,El Dorado County,Description,Metro - Counties in metro areas of 1 million population or more
+06019,CA,Fresno County,Population_2020,1008654
+06019,CA,Fresno County,RUCC_2023,1
+06019,CA,Fresno County,Description,Metro - Counties in metro areas of 1 million population or more
+06021,CA,Glenn County,Population_2020,28917
+06021,CA,Glenn County,RUCC_2023,6
+06021,CA,Glenn County,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
+06023,CA,Humboldt County,Population_2020,136463
+06023,CA,Humboldt County,RUCC_2023,5
+06023,CA,Humboldt County,Description,"Nonmetro - Urban population of 20,000 or more, not adjacent to a metro area"
+06025,CA,Imperial County,Population_2020,179702
+06025,CA,Imperial County,RUCC_2023,3
+06025,CA,Imperial County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+06027,CA,Inyo County,Population_2020,19016
+06027,CA,Inyo County,RUCC_2023,6
+06027,CA,Inyo County,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
+06029,CA,Kern County,Population_2020,909235
+06029,CA,Kern County,RUCC_2023,2
+06029,CA,Kern County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06031,CA,Kings County,Population_2020,152486
+06031,CA,Kings County,RUCC_2023,3
+06031,CA,Kings County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+06033,CA,Lake County,Population_2020,68163
+06033,CA,Lake County,RUCC_2023,4
+06033,CA,Lake County,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
+06035,CA,Lassen County,Population_2020,32730
+06035,CA,Lassen County,RUCC_2023,7
+06035,CA,Lassen County,Description,"Nonmetro - Urban population of 5,000 to 20,000, not adjacent to a metro area"
+06037,CA,Los Angeles County,Population_2020,10014009
+06037,CA,Los Angeles County,RUCC_2023,1
+06037,CA,Los Angeles County,Description,Metro - Counties in metro areas of 1 million population or more
+06039,CA,Madera County,Population_2020,156255
+06039,CA,Madera County,RUCC_2023,1
+06039,CA,Madera County,Description,Metro - Counties in metro areas of 1 million population or more
+06041,CA,Marin County,Population_2020,262321
+06041,CA,Marin County,RUCC_2023,1
+06041,CA,Marin County,Description,Metro - Counties in metro areas of 1 million population or more
+06043,CA,Mariposa County,Population_2020,17131
+06043,CA,Mariposa County,RUCC_2023,8
+06043,CA,Mariposa County,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
+06045,CA,Mendocino County,Population_2020,91601
+06045,CA,Mendocino County,RUCC_2023,4
+06045,CA,Mendocino County,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
+06047,CA,Merced County,Population_2020,281202
+06047,CA,Merced County,RUCC_2023,2
+06047,CA,Merced County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06049,CA,Modoc County,Population_2020,8700
+06049,CA,Modoc County,RUCC_2023,8
+06049,CA,Modoc County,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
+06051,CA,Mono County,Population_2020,13195
+06051,CA,Mono County,RUCC_2023,7
+06051,CA,Mono County,Description,"Nonmetro - Urban population of 5,000 to 20,000, not adjacent to a metro area"
+06053,CA,Monterey County,Population_2020,439035
+06053,CA,Monterey County,RUCC_2023,2
+06053,CA,Monterey County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06055,CA,Napa County,Population_2020,138019
+06055,CA,Napa County,RUCC_2023,3
+06055,CA,Napa County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+06057,CA,Nevada County,Population_2020,102241
+06057,CA,Nevada County,RUCC_2023,4
+06057,CA,Nevada County,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
+06059,CA,Orange County,Population_2020,3186989
+06059,CA,Orange County,RUCC_2023,1
+06059,CA,Orange County,Description,Metro - Counties in metro areas of 1 million population or more
+06061,CA,Placer County,Population_2020,404739
+06061,CA,Placer County,RUCC_2023,1
+06061,CA,Placer County,Description,Metro - Counties in metro areas of 1 million population or more
+06063,CA,Plumas County,Population_2020,19790
+06063,CA,Plumas County,RUCC_2023,9
+06063,CA,Plumas County,Description,"Nonmetro - Urban population of fewer than 5,000, not adjacent to a metro area"
+06065,CA,Riverside County,Population_2020,2418185
+06065,CA,Riverside County,RUCC_2023,1
+06065,CA,Riverside County,Description,Metro - Counties in metro areas of 1 million population or more
+06067,CA,Sacramento County,Population_2020,1585055
+06067,CA,Sacramento County,RUCC_2023,1
+06067,CA,Sacramento County,Description,Metro - Counties in metro areas of 1 million population or more
+06069,CA,San Benito County,Population_2020,64209
+06069,CA,San Benito County,RUCC_2023,1
+06069,CA,San Benito County,Description,Metro - Counties in metro areas of 1 million population or more
+06071,CA,San Bernardino County,Population_2020,2181654
+06071,CA,San Bernardino County,RUCC_2023,1
+06071,CA,San Bernardino County,Description,Metro - Counties in metro areas of 1 million population or more
+06073,CA,San Diego County,Population_2020,3298634
+06073,CA,San Diego County,RUCC_2023,1
+06073,CA,San Diego County,Description,Metro - Counties in metro areas of 1 million population or more
+06075,CA,San Francisco County,Population_2020,873965
+06075,CA,San Francisco County,RUCC_2023,1
+06075,CA,San Francisco County,Description,Metro - Counties in metro areas of 1 million population or more
+06077,CA,San Joaquin County,Population_2020,779233
+06077,CA,San Joaquin County,RUCC_2023,2
+06077,CA,San Joaquin County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06079,CA,San Luis Obispo County,Population_2020,282424
+06079,CA,San Luis Obispo County,RUCC_2023,2
+06079,CA,San Luis Obispo County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06081,CA,San Mateo County,Population_2020,764442
+06081,CA,San Mateo County,RUCC_2023,1
+06081,CA,San Mateo County,Description,Metro - Counties in metro areas of 1 million population or more
+06083,CA,Santa Barbara County,Population_2020,448229
+06083,CA,Santa Barbara County,RUCC_2023,2
+06083,CA,Santa Barbara County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06085,CA,Santa Clara County,Population_2020,1936259
+06085,CA,Santa Clara County,RUCC_2023,1
+06085,CA,Santa Clara County,Description,Metro - Counties in metro areas of 1 million population or more
+06087,CA,Santa Cruz County,Population_2020,270861
+06087,CA,Santa Cruz County,RUCC_2023,2
+06087,CA,Santa Cruz County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06089,CA,Shasta County,Population_2020,182155
+06089,CA,Shasta County,RUCC_2023,3
+06089,CA,Shasta County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+06091,CA,Sierra County,Population_2020,3236
+06091,CA,Sierra County,RUCC_2023,8
+06091,CA,Sierra County,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
+06093,CA,Siskiyou County,Population_2020,44076
+06093,CA,Siskiyou County,RUCC_2023,7
+06093,CA,Siskiyou County,Description,"Nonmetro - Urban population of 5,000 to 20,000, not adjacent to a metro area"
+06095,CA,Solano County,Population_2020,453491
+06095,CA,Solano County,RUCC_2023,2
+06095,CA,Solano County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06097,CA,Sonoma County,Population_2020,488863
+06097,CA,Sonoma County,RUCC_2023,2
+06097,CA,Sonoma County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06099,CA,Stanislaus County,Population_2020,552878
+06099,CA,Stanislaus County,RUCC_2023,2
+06099,CA,Stanislaus County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06101,CA,Sutter County,Population_2020,99633
+06101,CA,Sutter County,RUCC_2023,3
+06101,CA,Sutter County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+06103,CA,Tehama County,Population_2020,65829
+06103,CA,Tehama County,RUCC_2023,4
+06103,CA,Tehama County,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
+06105,CA,Trinity County,Population_2020,16112
+06105,CA,Trinity County,RUCC_2023,8
+06105,CA,Trinity County,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
+06107,CA,Tulare County,Population_2020,473117
+06107,CA,Tulare County,RUCC_2023,2
+06107,CA,Tulare County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06109,CA,Tuolumne County,Population_2020,55620
+06109,CA,Tuolumne County,RUCC_2023,4
+06109,CA,Tuolumne County,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
+06111,CA,Ventura County,Population_2020,843843
+06111,CA,Ventura County,RUCC_2023,2
+06111,CA,Ventura County,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+06113,CA,Yolo County,Population_2020,216403
+06113,CA,Yolo County,RUCC_2023,1
+06113,CA,Yolo County,Description,Metro - Counties in metro areas of 1 million population or more
+06115,CA,Yuba County,Population_2020,81575
+06115,CA,Yuba County,RUCC_2023,3
+06115,CA,Yuba County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"

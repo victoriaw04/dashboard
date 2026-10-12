@@ -60,12 +60,12 @@ function addInteractions(map, pointLayer, describe) {
 }
 function synchronize(maps) {
   let syncing = false;
-  maps.forEach((map, index) => map.on('move', () => {
+  maps.forEach(map => map.on('move', () => {
     if (syncing) return;
     syncing = true;
     try {
-      maps[1 - index].jumpTo({center: map.getCenter(), zoom: map.getZoom(),
-        bearing: map.getBearing(), pitch: map.getPitch()});
+      maps.filter(other => other !== map).forEach(other => other.jumpTo({center: map.getCenter(), zoom: map.getZoom(),
+        bearing: map.getBearing(), pitch: map.getPitch()}));
     } finally { syncing = false; }
   }));
   document.getElementById('reset-maps').addEventListener('click', () => {
@@ -148,10 +148,62 @@ function addAccessHover(map, panelId, providers, averages) {
   map.on('move', () => { if (pointer) schedule(); });
   map.getCanvas().addEventListener('mouseleave', () => { pointer = null; reset(); });
 }
+function displayNumber(value, signed = false, digits = 1) {
+  return value == null ? 'Unavailable' : `${signed && value > 0 ? '+' : ''}${Number(value).toFixed(digits)}`;
+}
+function renderStatistics(s) {
+  const panel = document.getElementById('metric-cards');
+  const [u, r] = s.groups;
+  function card(title, value, interpretation, sample, limitation) {
+    const article = document.createElement('article');
+    const heading = document.createElement('h3'); heading.textContent = title;
+    const number = document.createElement('p'); number.className = 'metric-value'; number.textContent = value;
+    article.append(heading); article.append(number);
+    for (const text of [interpretation, 'Sample: ' + sample, 'Missing-data limitation: ' + limitation]) {
+      const p = document.createElement('p'); p.textContent = text; article.append(p);
+    }
+    panel.append(article);
+  }
+  card('Urban–rural mean signed error gap', displayNumber(s.signed_gap, true) + ' births / 1,000',
+    `Urban/metro mean (${displayNumber(u.mean_error, true)}) minus rural/nonmetro mean (${displayNumber(r.mean_error, true)}). Positive = more upward error in urban counties.`,
+    `urban ${u.paired}/${u.total}; rural ${r.paired}/${r.total} paired counties`,
+    `${s.excluded} unpaired counties excluded; unequal coverage may change this contrast.`);
+  card('Population–signed error Spearman correlation', displayNumber(s.spearman, true, 3),
+    'Correlation of 2020 total population rank with signed error rank. Positive = larger counties tend toward more upward error; this does not measure error magnitude.',
+    `${s.spearman_n} paired counties with population; ${s.total - s.spearman_n} excluded`,
+    'Requires both rates and population; average ranks handle ties. Undefined with constant ranks. Complete-case association is not causal or proof of systematic bias.');
+  card('Top-10 birth-rate overlap' + (s.top10.provisional ? ' · Provisional' : ''),
+    s.top10.fraction == null ? 'Unavailable (fewer than 10 ranked counties)' : `${s.top10.overlap}/10 (${(100*s.top10.fraction).toFixed(0)}%)`,
+    'Shared counties in separately ranked observed and AI top-10 lists. Equal rates break ties alphabetically; this is rate agreement, not absolute birth-count agreement.',
+    `${s.top10.observed_n} observed rates; ${s.top10.ai_n} AI rates; ${s.top10.observed_top_covered}/10 observed top counties have AI estimates`,
+    `Observed top-10: ${s.top10.observed_top.join(', ')}. AI top-10: ${s.top10.ai_top.join(', ')}. Missing AI rates cannot rank; observed suppression limits the reference ranking. Rankings are provisional when fewer than 10 observed top-rate counties have AI estimates.`);
+  card('Urban–rural AI coverage gap', displayNumber(s.coverage_gap, true) + ' percentage points',
+    `Urban/metro (${displayNumber(u.coverage == null ? null : u.coverage*100)}%) minus rural/nonmetro (${displayNumber(r.coverage == null ? null : r.coverage*100)}%) with numerical AI rates. Positive = greater urban coverage.`,
+    `urban ${u.covered}/${u.total}; rural ${r.covered}/${r.total}; all ${s.total} counties`,
+    'No observed rate required. Missing AI estimates are omissions in coverage, never zero birth rates. Provider estimates are unavailable statewide.');
+  card('High-birth-rate county omission rate', displayNumber(s.high_rate.omission_rate == null ? null : 100*s.high_rate.omission_rate) + '%',
+    `Share lacking an AI rate among observed rates ≥ the 75th percentile (${displayNumber(s.high_rate.threshold, false, 2)} per 1,000). Quantile uses linear interpolation; threshold ties are included.`,
+    `${s.high_rate.omitted}/${s.high_rate.n} high-rate counties omitted; threshold from ${s.high_rate.observed_n} observed counties`,
+    `${s.total-s.high_rate.observed_n} missing/suppressed observed rates excluded from the threshold and denominator. Omitted: ${s.high_rate.omitted_counties.join(', ') || 'none'}. High birth rate does not measure general vulnerability.`);
+  const regionList = document.createElement('div'); regionList.className = 'table-scroll';
+  const table = document.createElement('table');
+  const caption = document.createElement('caption'); caption.textContent = 'Mean absolute error by Caltrans region · births per 1,000'; table.append(caption);
+  const head = document.createElement('thead'), hr = document.createElement('tr');
+  for (const label of ['Region', 'MAE', 'Paired n / total', 'Excluded']) { const th = document.createElement('th'); th.scope='col'; th.textContent=label; hr.append(th); }
+  head.append(hr); table.append(head);
+  const body = document.createElement('tbody');
+  for (const row of s.regions) {
+    const tr = document.createElement('tr');
+    [row.region, displayNumber(row.mae), `${row.n}/${row.total}`, row.excluded].forEach((v,i) => {const cell=document.createElement(i ? 'td' : 'th'); if (!i) cell.scope='row'; cell.textContent=v; tr.append(cell);});
+    body.append(tr);
+  }
+  table.append(body); regionList.append(table); document.getElementById('region-statistics').append(regionList);
+}
 async function start() {
-  const [boundaries, births, locations, scenario] = await Promise.all([
+  const [boundaries, births, locations, scenario, geography] = await Promise.all([
     readJSON('./data/california-counties.geojson'), readJSON('./data/birth-rates.json'),
-    readJSON('./data/aflp-locations.geojson'), readJSON('./data/ai-representation.json')
+    readJSON('./data/aflp-locations.geojson'), readJSON('./data/ai-representation.json'),
+    readJSON('./data/county-geography.json')
   ]);
   const byCounty = new Map(births.rows.map(row => [row.county.trim().toLowerCase(), row]));
   const aiByCounty = new Map(scenario.counties.map(row => [row.county, row]));
@@ -167,33 +219,63 @@ async function start() {
     return {...feature, properties: {county, rate: row.estimated_birth_rate, confidence: row.confidence, reasoning: row.reasoning}};
   })};
   const access = buildAccessSummary(boundaries, locations.features);
+  const comparison = GeographicBias.join(births.rows, scenario.counties, geography.rows);
+  const statistics = GeographicBias.calculate(comparison);
+  renderStatistics(statistics);
+  const errorByCounty = new Map(comparison.map(row => [row.county, row]));
+  const errors = {type: 'FeatureCollection', features: boundaries.features.map(feature => ({
+    ...feature, properties: errorByCounty.get(feature.properties.CDT_NAME_SHORT)
+  }))};
   const tbody = document.getElementById('scenario-rows');
-  const errors = [];
-  for (const row of scenario.counties) {
-    const observed = byCounty.get(row.county.toLowerCase())?.rate ?? null;
-    const estimate = row.estimated_birth_rate;
-    const difference = observed == null || estimate == null ? null : estimate - observed;
-    if (difference != null) errors.push(difference);
-    const count = locations.features.filter(f => f.properties.county === row.county).length;
-    const tr = document.createElement('tr');
-    [row.county, observed == null ? 'Unavailable / suppressed' : observed.toFixed(1),
-      estimate == null ? 'Unavailable' : estimate.toFixed(1),
-      difference == null ? 'Unavailable' : `${difference > 0 ? '+' : ''}${difference.toFixed(1)}`,
-      count, row.estimated_provider_count ?? 'Unavailable', row.confidence,
-      row.reasoning + ' Provider estimate: ' + row.provider_count_unavailable_reason].forEach((value, index) => {
-      const cell = document.createElement(index === 0 ? 'th' : 'td');
-      if (index === 0) cell.scope = 'row';
-      cell.textContent = value; tr.append(cell);
-    });
-    tbody.append(tr);
+  function renderTable() {
+    tbody.replaceChildren();
+    const key = document.getElementById('table-sort').value;
+    const descending = document.getElementById('table-direction').value === 'descending';
+    for (const row of GeographicBias.sortRows(comparison, key, descending)) {
+      const ai = aiByCounty.get(row.county);
+      const count = locations.features.filter(f => f.properties.county === row.county).length;
+      const tr = document.createElement('tr');
+      [row.county, row.urban_rural, row.region, row.population_2020.toLocaleString(),
+        displayNumber(row.observed), displayNumber(row.estimate), displayNumber(row.error, true), displayNumber(row.absolute_error),
+        count, ai.estimated_provider_count ?? 'Unavailable', ai.confidence,
+        ai.reasoning + ' Provider estimate: ' + ai.provider_count_unavailable_reason].forEach((value, index) => {
+        const cell = document.createElement(index === 0 ? 'th' : 'td');
+        if (index === 0) cell.scope = 'row';
+        cell.textContent = value; tr.append(cell);
+      });
+      tbody.append(tr);
+    }
+    document.getElementById('table-sort-status').textContent = `58 counties sorted by ${key.replaceAll('_', ' ')} (${descending ? 'descending' : 'ascending'}); unavailable values last.`;
   }
-  const mean = values => values.reduce((a,b) => a+b, 0) / values.length;
-  document.getElementById('bias-summary').textContent = errors.length ?
-    `${errors.length} counties have both rates available. Mean signed error (AI − observed): ${mean(errors).toFixed(1)}; mean absolute error: ${mean(errors.map(Math.abs)).toFixed(1)} births per 1,000. Missing pairs are excluded. These are unweighted county averages, not population averages.` :
-    'No paired rates available for comparison.';
+  for (const id of ['table-sort', 'table-direction']) document.getElementById(id).addEventListener('change', renderTable);
+  renderTable();
+  const paired = comparison.filter(row => row.error !== null);
+  document.getElementById('bias-summary').textContent = `${paired.length} paired counties; ${statistics.excluded} excluded. Mean signed error: ${displayNumber(GeographicBias.mean(paired.map(r => r.error)), true)}; mean absolute error: ${displayNumber(GeographicBias.mean(paired.map(r => r.absolute_error)))} births per 1,000. County-weighted, not population-weighted.`;
   const map = createMap('map', statusElement, 'CDPH · California Department of Technology');
   const nextMap = createMap('scenario-map', scenarioStatus, 'AI estimates · Boundaries: California Department of Technology');
-  synchronize([map, nextMap]);
+  const errorStatus = document.getElementById('error-status');
+  const errorMap = createMap('error-map', errorStatus, 'AI − CDPH 2024 · Boundaries: California Department of Technology');
+  synchronize([map, nextMap, errorMap]);
+  errorMap.on('load', () => {
+    errorMap.addSource('county-births', {type: 'geojson', data: errors});
+    errorMap.addLayer({id: 'county-fill', type: 'fill', source: 'county-births', paint: {
+      'fill-color': ['case', ['==', ['get', 'error'], null], '#b8b4c7',
+        ['interpolate', ['linear'], ['get', 'error'], -15, '#2166ac', 0, '#f7f7f7', 15, '#b2182b']]}});
+    errorMap.addLayer({id: 'county-outline', type: 'line', source: 'county-births', paint: {'line-color': '#60756f', 'line-width': .8}});
+    errorMap.addLayer({id: 'missing-outline', type: 'line', source: 'county-births',
+      filter: ['==', ['get', 'error'], null], paint: {'line-color': '#514368', 'line-width': 2, 'line-dasharray': [2, 2]}});
+    errorMap.addSource('empty', {type: 'geojson', data: {type: 'FeatureCollection', features: []}});
+    errorMap.addLayer({id: 'empty-points', type: 'circle', source: 'empty'});
+    addInteractions(errorMap, 'empty-points', (_, county) => {
+      const p = county.properties;
+      return popupContent(p.county + ' County · Estimation error', [
+        `Observed 2024 rate: ${displayNumber(p.observed)}`, `AI rate: ${displayNumber(p.estimate)}`,
+        `AI − observed: ${displayNumber(p.error, true)} births per 1,000 females ages 15–19`,
+        p.error == null ? 'Excluded: observed rate or AI estimate is unavailable; this is not zero error.' : 'Positive = overestimate; negative = underestimate.',
+        `${p.urban_rural} · ${p.region} · 2020 population: ${Number(p.population_2020).toLocaleString()}`]);
+    });
+    if (!errorStatus.classList.contains('error')) errorStatus.textContent = `${statistics.paired} paired counties · ${statistics.excluded} missing pairs · Fixed symmetric ±15 scale; extremes saturate`;
+  });
   map.on('load', () => {
     addCounties(map, counties);
     addAccessHover(map, 'access-hover', locations.features, access.observed);
@@ -239,7 +321,7 @@ async function start() {
 }
 start().catch(error => {
   console.error(error);
-  for (const status of [statusElement, scenarioStatus]) {
+  for (const status of [statusElement, scenarioStatus, document.getElementById('error-status')]) {
     status.classList.add('error');
     status.textContent = 'The comparison could not load. Serve this folder through a local static preview and check that WebGL is available.';
   }

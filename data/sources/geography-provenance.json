@@ -1,0 +1,16 @@
+{
+  "retrieved_date": "2026-10-11",
+  "source_title": "USDA Economic Research Service, 2023 Rural-Urban Continuum Codes",
+  "source_url": "https://ers.usda.gov/media/5768/2023-rural-urban-continuum-codes.csv?v=22651",
+  "source_landing_url": "https://ers.usda.gov/data-products/rural-urban-continuum-codes",
+  "documentation_url": "https://ers.usda.gov/data-products/rural-urban-continuum-codes/documentation",
+  "file_last_updated": "2024-01-22",
+  "classification_vintage": 2023,
+  "classification_rule": "RUCC 1\u20133 = Urban/metro; 4\u20139 = Rural/nonmetro. County-level metro proxy, not Census urban residence.",
+  "population_source": "2020 Census Demographic and Housing Characteristics File, as distributed by USDA ERS",
+  "population_reference_date": "2020-04-01",
+  "population_unit": "Total county residents, all ages and sexes",
+  "national_csv_sha256": "ec455ee2a8bc5fc8e070575ea5bee7dce46fc6037f8c3449cbf56e8b45331fa7",
+  "california_csv_sha256": "e7e3636868bfe6c19a5ade6056f2c8f43d388c5b3bf1b5c9ffc0529bc6e2569a",
+  "processing": "Archive original header and all FIPS 06 rows byte-for-byte; pivot Attribute/Value by five-digit FIPS; parse RUCC_2023 and Population_2020 as integers; join boundary CENSUS_GEOID; assert 58 one-to-one county matches. Region assignments are transcribed from the cited county lists and validated for exhaustive, disjoint coverage. No imputation or alteration of experimental inputs."
+}

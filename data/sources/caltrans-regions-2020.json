@@ -1,0 +1,83 @@
+{
+  "source": {
+    "title": "Caltrans 2020 California County-Level Economic Forecast, Regional Definitions, printed page 4 (PDF page 5)",
+    "url": "https://dot.ca.gov/-/media/dot-media/programs/transportation-planning/documents/new-state-planning/transportation-economics/socioeconomic-forecasts/2020/2020-methodology-and-introduction/county-level-forecasts-intro-2020-a11y.pdf",
+    "publication_date": "2020-10",
+    "retrieved_date": "2026-10-11",
+    "method": "Transcribed county membership from the seven published regional lists; these are descriptive economic regions, not clinical or vulnerability classifications."
+  },
+  "regions": {
+    "Southern California": [
+      "Imperial",
+      "Los Angeles",
+      "Orange",
+      "Riverside",
+      "San Bernardino",
+      "San Diego",
+      "Ventura"
+    ],
+    "Central Valley": [
+      "Fresno",
+      "Kern",
+      "Kings",
+      "Madera",
+      "Merced",
+      "San Joaquin",
+      "Stanislaus",
+      "Tulare"
+    ],
+    "Central Coast": [
+      "Monterey",
+      "San Benito",
+      "San Luis Obispo",
+      "Santa Barbara",
+      "Santa Cruz"
+    ],
+    "Bay Area": [
+      "Alameda",
+      "Contra Costa",
+      "Marin",
+      "Napa",
+      "San Francisco",
+      "San Mateo",
+      "Santa Clara",
+      "Solano",
+      "Sonoma"
+    ],
+    "Sierra Region": [
+      "Alpine",
+      "Amador",
+      "Calaveras",
+      "Inyo",
+      "Mariposa",
+      "Mono",
+      "Nevada",
+      "Sierra",
+      "Tuolumne"
+    ],
+    "Sacramento Valley": [
+      "El Dorado",
+      "Placer",
+      "Sacramento",
+      "Sutter",
+      "Yolo",
+      "Yuba"
+    ],
+    "Northern California": [
+      "Butte",
+      "Colusa",
+      "Del Norte",
+      "Glenn",
+      "Humboldt",
+      "Lake",
+      "Lassen",
+      "Mendocino",
+      "Modoc",
+      "Plumas",
+      "Shasta",
+      "Siskiyou",
+      "Tehama",
+      "Trinity"
+    ]
+  }
+}
