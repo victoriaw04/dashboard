@@ -109,7 +109,7 @@ never writes observed births, AI estimates, AFLP locations, or boundary inputs.
 The third map uses signed error with a fixed, symmetric continuous scale:
 blue at −15, near-white at zero, and red at +15 births per 1,000. Values beyond
 these endpoints saturate; popups report exact values. Missing pairs have lavender
-fill and dashed purple outlines, distinct from zero. All three maps synchronize
+fill and dashed purple outlines, distinct from zero. All four maps synchronize
 pan/zoom/reset; the first two retain their shared birth-rate thresholds.
 
 The urban visibility hypothesis predicts greater coverage or geographic attention
@@ -137,15 +137,16 @@ classification dates, and an unspecified AI target year limit inference. No
 correlation or single response establishes systematic bias or causation. Repeated
 independent experiments and sensitivity analyses of classifications, cutoff ties,
 and years are needed. Public AFLP sites describe supply, not need or capacity;
-all frozen AI provider estimates remain unavailable, so provider prediction and
-AI access metrics cannot be calculated.
+provider estimates in the original birth-rate response remain unavailable.
+The separate provider experiment below evaluates new count predictions; AI travel
+access remains unavailable because no actual facility coordinates were predicted.
 
 ## Validation
 
 Run `python3 scripts/prepare-geography.py` and execute `scripts/test-metrics.js`
 with JavaScriptCore `jsc` from the repository root. With Node, use
 `node scripts/test-metrics.js`. Also run `scripts/test-dashboard.js` with either
-runtime for a DOM/map smoke test of three-way synchronization/reset, both rate
+runtime for a DOM/map smoke test of four-way synchronization/reset, both rate
 scales, metric panels, 58 county/accessibility rows, and all eight sort modes.
 The smoke test uses map mocks and does not verify browser/WebGL rendering.
 Tests cover tied ranks, inverse correlation,
@@ -155,3 +156,138 @@ regional MAE, and missing-last sorting in both directions.
 
 The frozen AI JSON SHA-256 remains
 `7c9baa8f3dfa5524afe4077e98c5f80f0ab07b682c245720a139b6a7d19d5cd2`.
+
+## AFLP provider-count experiment
+
+This is a separate exploratory pilot. It **does not fill or alter the null provider
+fields in `data/ai-representation.json`**, change AI birth rates, or retune the birth
+experiment. The additional map and tables use `data/ai-aflp-estimates.json` only.
+
+### Independence and archival procedure
+
+On October 11, 2026, a fresh predictor sub-agent was created with
+`fork_turns="none"`. It inherited no conversation history and received neither
+repository contents, observed data, county classifications, population, maps, nor
+prior metrics. It received the user's experimental prompt **verbatim**, plus a
+separate JSON-formatting wrapper and explicit instructions to avoid tools and
+other agents. It returned a complete original 58-county response with nonnegative
+integer counts before any tool use. The predictor reports no browsing, API calls,
+file reads, random number generation, hashing, or formula-based count generation.
+
+Only after completing that response did the session receive an archival task to
+write `data/ai-aflp-response.json` and `data/ai-aflp-estimates.json`. The original
+counties arrays match exactly. The evaluator then opened observed provider data;
+the predictor was never shown observed values or results and never revised its
+estimates. The main evaluator knew the project from earlier work; the predictor
+context did not inherit that history. Archival writes after generation accessed no
+observed inputs. These steps and hashes are recorded in
+`data/ai-aflp-protocol.json`.
+
+The predictor's exact API model identifier and temperature/top-p/seed were not
+exposed and are explicitly null. The assistant is described as Codex based on
+GPT-6; this is not a verified API ID. The exact prompt and date are preserved in
+the estimate file; the separately supplied formatting wrapper is recorded in the
+protocol. All 58 confidence labels are low and uncalibrated. Conversation isolation
+is not independent model training and cannot exclude familiarity from training
+data. The prompt did not specify a target directory date; comparison with the
+saved September 2026 snapshot is descriptive rather than a dated forecast.
+
+Frozen SHA-256 values (verification only, never count generation):
+
+- Original provider response: `2e247835f2c95881b612b7f254c3aec9fe3be4b2a62891f3ca5960e01f7a0e04`.
+- Provider estimates plus metadata: `924c5308ec9c88a087eff02511d7e77c01fc3d604db3caf528ff7fab98961755`.
+- Original birth experiment remains `7c9baa8f3dfa5524afe4077e98c5f80f0ab07b682c245720a139b6a7d19d5cd2`.
+
+### Observed counts and geographic display
+
+Ground truth is the checked-in `data/aflp-locations.geojson`, derived from the
+[CDPH AFLP directory](https://www.cdph.ca.gov/Programs/CFH/DMCAH/AFLP/Pages/Sites.aspx)
+snapshot retrieved September 5, 2026 (`data/aflp-directory.tsv`). The new count
+analysis ignores coordinates: it groups addresses by the directory's county and
+deduplicates normalized address + city strings (trim, lowercase, collapse whitespace;
+preserve suites). There are 18 distinct addresses in 15 counties. Unknown counties
+or incomplete addresses trigger errors rather than silently producing zero.
+
+Zero observed addresses means no address is **listed in this snapshot**, not that
+no providers, general support, or cross-county services exist. Agency addresses
+are not staff counts, client volumes, program capacity, eligibility, or service
+areas. The 2023 RUCC classification and 2020 total county population are reused
+unchanged from the sourced geography dataset documented above.
+
+The fourth map places circles at **county representative points**, not facilities.
+It samples the existing 24×24 interior geometry grid and chooses the retained point
+nearest the county bounding-box center (straight-line distance; stable traversal
+breaks ties). This geometry-only rule is applied after estimates are frozen and
+has no effect on predicted counts. All 58 points lie inside their county polygons;
+no provider coordinates are predicted. For a positive estimate `p`, radius is
+`5 × sqrt(p)` pixels, so area is proportional to count. A small hollow point
+explicitly represents a predicted zero; lavender county fill represents missing
+predictions. Popups include confidence and original reasoning. No travel distance,
+nearest provider, service area, or accessibility calculation uses these points.
+The original observed distance analysis remains unchanged.
+
+### Provider evaluation metrics
+
+Let `P_c` be distinct listed addresses, `A_c` the frozen AI count, and
+`e_c = A_c − P_c`. Numerical AI zero is valid; missing AI predictions remain null.
+Use equal county weights and report paired sample sizes. Undefined statistics are
+unavailable, not zero. These units are provider locations, separate from births
+per 1,000 and from general vulnerability.
+
+| Metric | Formula, sample, and interpretation |
+| --- | --- |
+| MAE | `sum(abs(e_c))/n` among counties with numerical predictions and observed counts. Higher means less accurate available predictions. |
+| Mean signed error | `sum(e_c)/n` on the same pairs. Positive = overestimation of listed addresses. |
+| Urban–rural error gap | `mean(e in urban/metro) − mean(e in rural/nonmetro)`. Both groups use available pairs; show each paired n / total. Undefined if either group has no pairs. Positive = more upward error for metro counties. |
+| Population–signed error Spearman rho | Pearson correlation between average ranks of 2020 total population and `e_c`, using pairs with positive population. Handle ties with midranks. Report n and exclusions; fewer than two observations or constant ranks makes rho unavailable. This is signed error, not magnitude, and not a causal test. |
+| Predicted positive with none listed | `100 × count(A_c > 0 and P_c = 0)/n`, where n includes **all paired counties**. This is the percentage of all evaluated counties exhibiting this mismatch, not a conditional false-positive rate among observed-zero counties. |
+| Listed-provider counties predicted zero | `100 × count(A_c = 0 and P_c > 0)/count(P_c > 0 with numerical A_c)`. Report the covered observed-positive denominator and total observed-positive counties. Missing predictions are excluded, never classified as zero. An empty denominator makes the percentage unavailable. |
+
+The urban/rural summary also reports observed totals across all counties, predicted
+totals and means among available predictions, and paired MAE and signed error.
+Missing predictions can make those totals cover different sets; n / total is
+therefore displayed. The county table retains confidence and original reasoning,
+with count, signed error, and absolute error sorting.
+
+### Current provider results and interpretation
+
+All 58 predictions are numeric (17 genuine zeros, no missing predictions). The
+model predicted 64 addresses versus 18 listed. MAE = 0.793 and mean signed error =
++0.793 locations per county (n=58); no county's listed count was underestimated.
+The model predicted positive counts in 26 counties with none listed (26/58 =
+44.83%). It predicted zero in none of the counties with listed addresses
+(0/15 = 0%). These are distinct denominators.
+
+Metro mean signed error = +1.054 (n=37/37); nonmetro = +0.333 (n=21/21), for an
+urban–rural gap of +0.721 locations. Predicted totals are 57 metro and 7 nonmetro;
+listed totals are 18 metro and 0 nonmetro. Mean predicted counts per county are
+1.541 and 0.333, respectively. Population–signed-error rho = +0.684 (n=58),
+consistent with more upward count error for more populous counties in this response.
+
+**All observed addresses are in metro counties under this classification.** This
+snapshot cannot test missed nonmetro addresses because it has no observed positive
+nonmetro cases. The response does not show overlooked listed addresses in smaller
+counties; none of the observed-positive counties was predicted zero. Its metropolitan
+error pattern is consistent with one urban visibility hypothesis, but this single
+low-confidence response cannot establish systematic model bias, causation, actual
+service capacity, or the absence of rural support services. Directory omissions,
+county-level metro proxies, population vintage, and unspecified prediction date
+also limit conclusions. Repeated independent responses and broader service data
+are needed for the broader research question.
+
+### Reproduce and validate the separate experiment
+
+Serve the site locally as described above. `provider-metrics.js` joins frozen
+provider predictions and observed addresses, while `provider-dashboard.js` renders
+the fourth map and six metrics. Neither consumes observed birth rates or changes
+any experimental response. Original birth metrics still use `metrics.js`.
+
+Run `python3 scripts/test-provider-archive.py` for archived input integrity.
+Run `scripts/test-provider-metrics.js` with `jsc` or Node, then the existing
+`scripts/test-metrics.js` and updated `scripts/test-dashboard.js`. The new fixtures
+test address deduplication, genuine zeros versus missing predictions, all-county
+versus conditional denominators, urban/rural signed gaps, undefined values, and
+invalid/unmatched inputs. Dashboard checks test 58 provider rows, all six provider
+cards, representative-point containment, four-map synchronization, the original
+birth results, and the existing accessibility and sorting flows. They use map/DOM
+mocks and do not replace a browser/WebGL visual review.

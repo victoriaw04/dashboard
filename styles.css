@@ -72,3 +72,11 @@ tbody th{font-weight:400}
 .sort-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0}
 .sort-controls select{font:inherit;padding:8px;max-width:100%;border:1px solid #bacbc4;background:white;color:#243b39;border-radius:4px}
 @media(max-width:700px){.metric-grid{grid-template-columns:1fr}.statistics-panel{padding:18px}}
+
+#provider-experiment{scroll-margin-top:20px}
+#provider-experiment h3{margin-top:22px}
+#provider-experiment .metric-grid h3{margin-top:0}
+.bubble-key .zero-provider-key{width:6px;height:6px;background:white;border:1.5px solid #925126}
+#provider-sort{font:inherit;padding:8px;margin:10px;border:1px solid #bacbc4;background:white;color:#243b39;border-radius:4px}
+.dashboard-nav{display:flex;flex-wrap:wrap;gap:10px 20px;margin:0 0 24px;font-size:13px}
+.provider-limitation{padding:14px 18px;border-left:3px solid #925126;background:#f6f0e7}

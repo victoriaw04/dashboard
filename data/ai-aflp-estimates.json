@@ -1,0 +1,366 @@
+{
+  "counties": [
+    {
+      "county": "Alameda",
+      "estimated_provider_count": 3,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Multiple urban centers and established youth-serving institutions could support several agency addresses."
+    },
+    {
+      "county": "Alpine",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A very small mountain population may receive specialized services through agencies outside the county."
+    },
+    {
+      "county": "Amador",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A county public health office could provide a single local institutional base."
+    },
+    {
+      "county": "Butte",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Services may concentrate at one agency in the Chico–Oroville population corridor."
+    },
+    {
+      "county": "Calaveras",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Dispersed foothill communities may rely on regional arrangements without a dedicated local AFLP address."
+    },
+    {
+      "county": "Colusa",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A small agricultural population may be served through a neighboring county's agency."
+    },
+    {
+      "county": "Contra Costa",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Distinct western and eastern population centers could justify two agency locations."
+    },
+    {
+      "county": "Del Norte",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Geographic isolation could favor maintaining a local agency despite a small population."
+    },
+    {
+      "county": "El Dorado",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. County-level services may consolidate at one western-slope address despite the separate Tahoe community."
+    },
+    {
+      "county": "Fresno",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A major regional city and surrounding agricultural communities could sustain two institutional providers."
+    },
+    {
+      "county": "Glenn",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Specialized services may depend on nearby regional centers rather than a local listed address."
+    },
+    {
+      "county": "Humboldt",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A regional service hub around Eureka could house one agency serving dispersed coastal communities."
+    },
+    {
+      "county": "Imperial",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Distance from other metropolitan services could support one locally based public health provider."
+    },
+    {
+      "county": "Inyo",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Sparse settlement and long travel distances may lead to regional delivery without a local AFLP address."
+    },
+    {
+      "county": "Kern",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Bakersfield institutions and geographically separated communities could support two provider addresses."
+    },
+    {
+      "county": "Kings",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Services could concentrate in one county-level agency around Hanford."
+    },
+    {
+      "county": "Lake",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Relative isolation could encourage one local public health agency to host the service."
+    },
+    {
+      "county": "Lassen",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A small, remote population may lack a separately listed AFLP agency address."
+    },
+    {
+      "county": "Los Angeles",
+      "estimated_provider_count": 6,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Numerous independent institutions and separated communities could produce several locations, although contracting could consolidate delivery."
+    },
+    {
+      "county": "Madera",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. One county-based institution could serve the valley population and more remote foothill communities."
+    },
+    {
+      "county": "Marin",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. General youth and family services may absorb demand without a separately listed AFLP location."
+    },
+    {
+      "county": "Mariposa",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A small mountain population may rely on neighboring regional providers."
+    },
+    {
+      "county": "Mendocino",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A local agency near Ukiah could serve as a central address for geographically dispersed communities."
+    },
+    {
+      "county": "Merced",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. County public health or a community nonprofit could operate from one principal address."
+    },
+    {
+      "county": "Modoc",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Very sparse settlement may make a distinct locally listed AFLP provider unlikely."
+    },
+    {
+      "county": "Mono",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A small, dispersed eastern Sierra population may depend on broader regional services."
+    },
+    {
+      "county": "Monterey",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Salinas and coastal communities have different service networks that could support separate addresses."
+    },
+    {
+      "county": "Napa",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A centralized county or nonprofit family-service agency could provide one location."
+    },
+    {
+      "county": "Nevada",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Specialized youth-parent services may be incorporated into regional programs without a distinct county address."
+    },
+    {
+      "county": "Orange",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Extensive institutional capacity could support two locations, while centralized contracting could limit their number."
+    },
+    {
+      "county": "Placer",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. One agency in the more populated western area could anchor countywide services."
+    },
+    {
+      "county": "Plumas",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Small mountain communities may receive support through regional arrangements."
+    },
+    {
+      "county": "Riverside",
+      "estimated_provider_count": 3,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Widely separated western, desert, and valley communities could encourage multiple agency addresses."
+    },
+    {
+      "county": "Sacramento",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. County institutions and independent youth-serving nonprofits could support two locations."
+    },
+    {
+      "county": "San Benito",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Specialized services may be coordinated through neighboring counties rather than a local AFLP address."
+    },
+    {
+      "county": "San Bernardino",
+      "estimated_provider_count": 3,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Large distances between valley and desert communities could justify several institutional bases."
+    },
+    {
+      "county": "San Diego",
+      "estimated_provider_count": 3,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Distinct northern, central, and southern service networks could support three addresses."
+    },
+    {
+      "county": "San Francisco",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A compact geography and integrated service network could concentrate AFLP delivery at one agency."
+    },
+    {
+      "county": "San Joaquin",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Stockton and the county's other population centers could support two separate agency locations."
+    },
+    {
+      "county": "San Luis Obispo",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. One county-level provider could coordinate services across coastal and inland communities."
+    },
+    {
+      "county": "San Mateo",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A centralized public health or community agency could serve the peninsula from one address."
+    },
+    {
+      "county": "Santa Barbara",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Northern and southern population centers could maintain separate provider addresses."
+    },
+    {
+      "county": "Santa Clara",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Established county and nonprofit institutions could support two locations despite substantial administrative consolidation."
+    },
+    {
+      "county": "Santa Cruz",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A single community or county agency could coordinate services across the county."
+    },
+    {
+      "county": "Shasta",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Redding's role as a regional institutional hub could support one locally based provider."
+    },
+    {
+      "county": "Sierra",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A very small mountain population may rely on agencies located elsewhere."
+    },
+    {
+      "county": "Siskiyou",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Remoteness could favor one local public health base even with a dispersed population."
+    },
+    {
+      "county": "Solano",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A countywide agency could consolidate services for several distinct cities at one address."
+    },
+    {
+      "county": "Sonoma",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. One Santa Rosa-area institution could anchor services throughout the county."
+    },
+    {
+      "county": "Stanislaus",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Services may concentrate in one established Modesto-area public health or nonprofit agency."
+    },
+    {
+      "county": "Sutter",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Yuba City's regional role could support a local agency that also serves surrounding communities."
+    },
+    {
+      "county": "Tehama",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Specialized support may depend on neighboring regional institutions without a local listed address."
+    },
+    {
+      "county": "Trinity",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. A small, dispersed mountain population may receive services through outside agencies."
+    },
+    {
+      "county": "Tulare",
+      "estimated_provider_count": 2,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Multiple valley population centers and rural service needs could support two agency locations."
+    },
+    {
+      "county": "Tuolumne",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. One Sonora-area public health institution could provide a local service base."
+    },
+    {
+      "county": "Ventura",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Countywide administration could consolidate delivery at one agency despite several population centers."
+    },
+    {
+      "county": "Yolo",
+      "estimated_provider_count": 1,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. One county or community institution could coordinate services for Woodland, Davis, and other communities."
+    },
+    {
+      "county": "Yuba",
+      "estimated_provider_count": 0,
+      "confidence": "low",
+      "reasoning": "AI-generated estimate, not a verified count. Shared regional service networks could place the relevant agency address in adjacent Sutter County."
+    }
+  ],
+  "experimental_prompt": "You are participating in a research experiment investigating geographic bias in AI-generated representations of support services for pregnant and parenting youth in California.\n\nWithout accessing the internet, databases, external tools, or any observed statistics, estimate the number of Adolescent Family Life Program (AFLP) provider locations in each of California's 58 counties.\n\nFor this experiment, a provider location means one distinct publicly listed AFLP agency address located within that county. Count locations, not individual staff members, clients, or programs serving the county from elsewhere.\n\nFor each county, provide:\n\n1. County name.\n2. Your best estimate of the number of AFLP provider locations, as a nonnegative integer.\n3. Confidence level (low, medium, or high).\n4. A brief explanation of the geographic, demographic, or institutional assumptions behind your estimate.\n\nDo not use actual CDPH data, search for providers, or access external information.\n\nYour predictions should reflect your independent geographic understanding rather than actual observed provider counts.\n\nDo not assume that larger counties necessarily have more providers. Use your own judgment.\n\nIf uncertain, provide your best estimate with low confidence rather than declining solely because exact directory information is unavailable.\n\nInclude all 58 California counties. Label every value clearly as an AI-generated estimate, not a verified count.",
+  "generation_date": "2026-10-11",
+  "generation_timezone": "America/Los_Angeles",
+  "model_identifier": null,
+  "model_identifier_note": "exact API identifier not exposed; assistant described as Codex based on GPT-6",
+  "model_settings": {
+    "temperature": null,
+    "top_p": null,
+    "seed": null,
+    "note": "unavailable"
+  },
+  "generation_method": "fresh sub-agent with fork_turns=none; no inherited conversation or observed data; no tools used before final prediction; archival file writes only after the response was completed; JSON-format wrapper supplied separately from verbatim prompt",
+  "prediction_label": "AI-generated estimates, not verified counts",
+  "isolation_limitations": "independent conversation context, not an independently trained model; training data familiarity cannot be ruled out"
+}

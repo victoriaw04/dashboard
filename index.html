@@ -11,6 +11,8 @@
   <script defer src="./vendor/maplibre-gl.js"></script>
   <script defer src="./access.js"></script>
   <script defer src="./metrics.js"></script>
+  <script defer src="./provider-metrics.js"></script>
+  <script defer src="./provider-dashboard.js"></script>
   <script defer src="./app.js"></script>
 </head>
 <body>
@@ -25,12 +27,13 @@
       <p class="intro">County birth rates from the California Department of Public Health (CDPH), compared with its publicly listed Adolescent Family Life Program (AFLP) locations. County boundaries are from the California Department of Technology.</p>
     </header>
 
+    <nav class="dashboard-nav" aria-label="Dashboard sections"><a href="#comparison-heading">Birth-rate maps</a><a href="#error-heading">Signed error map</a><a href="#statistics-heading">Birth-rate metrics</a><a href="#provider-experiment">Provider experiment</a></nav>
     <section class="comparison" aria-labelledby="comparison-heading">
       <div class="comparison-heading">
         <div><h2 id="comparison-heading">Two views of adolescent health</h2><p>Compare observed rates with an independently generated AI response.</p></div>
-        <button id="reset-maps" type="button">Reset both maps</button>
+        <button id="reset-maps" type="button">Reset all maps</button>
       </div>
-      <p class="comparison-note">Pan and zoom either map to move both. The two rate maps share color thresholds; all three maps share synchronized scales. AI estimates were saved before inspecting the evaluation data.</p>
+      <p class="comparison-note">Pan and zoom any map to move all four. The two rate maps share color thresholds; all four maps share synchronized scales. AI estimates were saved before inspecting the evaluation data.</p>
       <div class="map-grid">
     <section class="map-section" aria-labelledby="map-heading">
       <div class="map-heading"><div><h2 id="map-heading">Observed California Data (CDPH, 2024)</h2><p>2024 · Ages 15–19 · Live births per 1,000 females</p></div><span class="tag">Observed</span></div>
@@ -58,7 +61,7 @@
         <p id="error-status" class="map-status" role="status">Loading estimation errors…</p>
         <div id="error-map" class="map-canvas" aria-label="Interactive map of signed county AI estimation errors"></div>
         <div class="error-legend" aria-label="Signed error color legend"><span>−15 or less · Underestimate</span><i></i><span>0</span><i></i><span>+15 or more · Overestimate</span><span class="missing-key">Missing pair (lavender, dashed outline)</span></div>
-        <p class="map-note">Blue = underestimation; red = overestimation; near-white = zero. Lavender with dashed outlines means an observed or AI rate is missing. All three maps pan and zoom together. Click a county for exact values.</p>
+        <p class="map-note">Blue = underestimation; red = overestimation; near-white = zero. Lavender with dashed outlines means an observed or AI rate is missing. All four maps pan and zoom together. Click a county for exact values.</p>
       </section>
       <div class="legend" aria-label="Shared birth-rate legend">
         <div><strong>Both maps: live births per 1,000 females, ages 15–19</strong><ul class="scale">
@@ -95,7 +98,7 @@
         <p>Positive differences indicate AI overestimation; negative differences indicate underestimation. Rates do not measure absolute concentration. Missing estimates can also reflect geographic knowledge gaps. Provider counts below count listed directory locations, not service capacity; “similar services” is broader than AFLP, so the two measures would require harmonization.</p>
         <div class="sort-controls"><label for="table-sort">Sort counties by</label> <select id="table-sort"><option value="absolute_error">Absolute error</option><option value="error">Signed error</option><option value="observed">Observed birth rate</option><option value="estimate">AI birth-rate estimate</option></select> <label for="table-direction">Order</label> <select id="table-direction"><option value="descending">Descending</option><option value="ascending">Ascending</option></select></div>
         <p id="table-sort-status" role="status"></p>
-        <div class="table-scroll"><table><caption>All 58 counties · differences in births per 1,000 females ages 15–19</caption><thead><tr><th scope="col">County</th><th scope="col">RUCC group</th><th scope="col">Caltrans region</th><th scope="col">2020 population</th><th scope="col">Observed rate (2024)</th><th scope="col">AI rate</th><th scope="col">AI − observed</th><th scope="col">Absolute error</th><th scope="col">Listed AFLP locations</th><th scope="col">AI providers</th><th scope="col">AI confidence</th><th scope="col">AI reasoning</th></tr></thead><tbody id="scenario-rows"></tbody></table></div>
+        <div class="table-scroll"><table><caption>All 58 counties · differences in births per 1,000 females ages 15–19</caption><thead><tr><th scope="col">County</th><th scope="col">RUCC group</th><th scope="col">Caltrans region</th><th scope="col">2020 population</th><th scope="col">Observed rate (2024)</th><th scope="col">AI rate</th><th scope="col">AI − observed</th><th scope="col">Absolute error</th><th scope="col">Listed AFLP locations</th><th scope="col">Original experiment: AI providers</th><th scope="col">AI confidence</th><th scope="col">AI reasoning</th></tr></thead><tbody id="scenario-rows"></tbody></table></div>
       </section>
     </section>
     <section class="ai-explanation" aria-labelledby="ai-explanation-heading">
@@ -103,7 +106,32 @@
       <p>The response was generated October 11, 2026 using existing model knowledge, before opening project data or maps. Its county estimates remain unchanged after comparison. <a href="./data/ai-representation.json">Download the full response, exact prompt, and metadata</a>.</p>
       <p>The interface does not expose an exact model identifier, temperature, seed, or top-p; those metadata fields are explicitly null. The assistant is described as Codex based on GPT-6, which is not a verified API model identifier.</p>
       <p>The model associated large urban counties with greater absolute numbers, and Central Valley and some rural counties with higher rates and support needs. These associations may encode stereotypes. This single response cannot establish a general urban bias across models. The statistics now use sourced county classifications and total population, but testing general bias still requires repeated independent responses and clear distinctions between rates and absolute numbers.</p>
-      <p>All confidence labels are self-reported and uncalibrated. Unknown provider counts are not zeros. No locations were fabricated to calculate AI accessibility. Observed accessibility still uses the original area-weighted grid and straight-line distance method.</p>
+      <p>All confidence labels are self-reported and uncalibrated. Unknown provider counts in the original birth-rate experiment are not zeros; the separate provider experiment below does not replace them. No locations were fabricated to calculate AI accessibility. Observed accessibility still uses the original area-weighted grid and straight-line distance method.</p>
+    </section>
+
+    <section id="provider-experiment" class="statistics-panel" aria-labelledby="provider-experiment-heading">
+      <p class="eyebrow">Separate independent experiment · AFLP locations</p>
+      <h2 id="provider-experiment-heading">AI-Estimated AFLP Provider Distribution</h2>
+      <p>A fresh model context with no inherited conversation generated these predictions before receiving any observed data. The original response is frozen. All confidence labels are low and uncalibrated. <a href="./data/ai-aflp-response.json">Original response</a> · <a href="./data/ai-aflp-estimates.json">Exact prompt and prediction metadata</a> · <a href="./README.md#aflp-provider-count-experiment">Independence procedure and formulas</a>.</p>
+      <p id="provider-summary" role="status">Loading independent provider estimates…</p>
+      <section class="map-section" aria-labelledby="provider-map-heading">
+        <div class="map-heading"><div><h3 id="provider-map-heading">Predicted county totals at representative points</h3><p>AI estimates, not verified provider locations · Low confidence</p></div></div>
+        <p id="provider-map-status" class="map-status" role="status">Loading provider distribution…</p>
+        <div id="provider-map" class="map-canvas" aria-label="AI-estimated AFLP counts at county representative points, not actual facilities"></div>
+        <div class="card-key bubble-key"><strong>AI-estimated count</strong><span><i style="--diameter:10px"></i>1</span><span><i style="--diameter:20px"></i>4</span><span><i class="zero-provider-key"></i>Predicted zero</span><span class="missing-key">Unavailable county (lavender)</span></div>
+        <p class="map-note">Circle area represents positive predicted counts. Small hollow points mean a genuine predicted zero; lavender means unavailable. Points are interior county representatives selected from geometry, not invented facility addresses. They are never used for travel-distance calculations.</p>
+      </section>
+      <h3>AFLP provider-count evaluation</h3>
+      <p>Observed counts refer to distinct listed addresses in the September 5, 2026 directory snapshot. Counties with no listed address have observed count zero in this snapshot. Listings do not measure service capacity, eligibility, outreach from other counties, or all available support. A predicted zero is not evidence that a county has no services.</p>
+      <p class="provider-limitation"><strong>Snapshot limitation:</strong> All 18 listed addresses fall in 15 metro counties under the saved RUCC classification. None is listed in the 21 nonmetro counties. Rural omission of observed AFLP locations therefore cannot be tested here; this does not mean rural counties have no services.</p>
+      <div id="provider-metrics" class="metric-grid"></div>
+      <h3>Urban and rural provider summary</h3>
+      <p>RUCC 2023 codes 1–3 = urban/metro; 4–9 = rural/nonmetro. Population correlation uses 2020 Census total residents. Predicted totals and means use available predictions; observed totals use all counties. These are count comparisons, separate from birth-rate metrics.</p>
+      <div class="table-scroll"><table><caption>Equal-weight county summaries · provider locations, not capacity</caption><thead><tr><th scope="col">RUCC group</th><th scope="col">Paired n / total</th><th scope="col">Listed total</th><th scope="col">AI total (available)</th><th scope="col">AI mean per county</th><th scope="col">Mean signed error</th><th scope="col">MAE</th></tr></thead><tbody id="provider-group-rows"></tbody></table></div>
+      <h3>County provider comparison</h3>
+      <label for="provider-sort">Sort descending by</label> <select id="provider-sort"><option value="absolute_error">Absolute error</option><option value="error">Signed error</option><option value="observed">Listed count</option><option value="estimate">AI estimate</option></select>
+      <div class="table-scroll"><table><caption>Independent provider-count experiment · all 58 counties</caption><thead><tr><th scope="col">County</th><th scope="col">Listed addresses</th><th scope="col">AI estimate</th><th scope="col">AI − listed</th><th scope="col">Absolute error</th><th scope="col">RUCC group</th><th scope="col">Confidence</th><th scope="col">Original model reasoning</th></tr></thead><tbody id="provider-rows"></tbody></table></div>
+      <p>This pilot measures the assumptions in one response. Correlations and metropolitan error differences cannot establish systematic model bias. Isolation prevents the evaluation data from entering this generation context; it cannot exclude prior training-data familiarity. Exact model ID and sampling settings were unavailable.</p>
     </section>
 
     <section class="sources" aria-labelledby="sources-heading">

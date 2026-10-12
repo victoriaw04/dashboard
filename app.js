@@ -200,10 +200,10 @@ function renderStatistics(s) {
   table.append(body); regionList.append(table); document.getElementById('region-statistics').append(regionList);
 }
 async function start() {
-  const [boundaries, births, locations, scenario, geography] = await Promise.all([
+  const [boundaries, births, locations, scenario, geography, providerExperiment] = await Promise.all([
     readJSON('./data/california-counties.geojson'), readJSON('./data/birth-rates.json'),
     readJSON('./data/aflp-locations.geojson'), readJSON('./data/ai-representation.json'),
-    readJSON('./data/county-geography.json')
+    readJSON('./data/county-geography.json'), readJSON('./data/ai-aflp-estimates.json')
   ]);
   const byCounty = new Map(births.rows.map(row => [row.county.trim().toLowerCase(), row]));
   const aiByCounty = new Map(scenario.counties.map(row => [row.county, row]));
@@ -255,7 +255,8 @@ async function start() {
   const nextMap = createMap('scenario-map', scenarioStatus, 'AI estimates · Boundaries: California Department of Technology');
   const errorStatus = document.getElementById('error-status');
   const errorMap = createMap('error-map', errorStatus, 'AI − CDPH 2024 · Boundaries: California Department of Technology');
-  synchronize([map, nextMap, errorMap]);
+  const providerMap = renderProviderExperiment(boundaries, locations, providerExperiment, geography);
+  synchronize([map, nextMap, errorMap, providerMap]);
   errorMap.on('load', () => {
     errorMap.addSource('county-births', {type: 'geojson', data: errors});
     errorMap.addLayer({id: 'county-fill', type: 'fill', source: 'county-births', paint: {
@@ -321,7 +322,7 @@ async function start() {
 }
 start().catch(error => {
   console.error(error);
-  for (const status of [statusElement, scenarioStatus, document.getElementById('error-status')]) {
+  for (const status of [statusElement, scenarioStatus, document.getElementById('error-status'), document.getElementById('provider-map-status')]) {
     status.classList.add('error');
     status.textContent = 'The comparison could not load. Serve this folder through a local static preview and check that WebGL is available.';
   }

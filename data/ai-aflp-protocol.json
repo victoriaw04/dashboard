@@ -1,0 +1,35 @@
+{
+  "experiment": "Separate isolated AFLP-count prediction pilot",
+  "generation_date": "2026-10-11",
+  "predictor_session": "/root/isolated_aflp_prediction",
+  "fork_turns": "none",
+  "sequence": [
+    "Predictor received verbatim experimental prompt and JSON formatting wrapper, without inherited conversation or observed files.",
+    "Predictor completed and returned original 58-county JSON response without tool calls.",
+    "After prediction completion, archival-only tools saved original response and metadata; counties arrays validated identical.",
+    "Evaluator then read the saved AFLP location dataset and began comparison; predictor received no observed values or evaluation results."
+  ],
+  "tool_use_attestation": "Prediction session reports no tools, browsing, repository reads, or observed data before completing the prediction. Subsequent tool use only wrote archival files and validated them.",
+  "response_format_wrapper": "Return your original response as a JSON object containing `counties` with exactly 58 objects with keys county, estimated_provider_count (nonnegative integer), confidence, reasoning. Do not claim access to an exact API model identifier or settings if unavailable. Do not revise after generation.",
+  "limitations": [
+    "Conversation-context isolation, not a separately trained model or guarantee against training-data familiarity.",
+    "Evaluator has prior project knowledge; prediction session inherited none of its conversation.",
+    "One response, all low confidence, no target directory date specified in the experimental prompt.",
+    "Exact API model identifier and sampling settings are not exposed."
+  ],
+  "frozen_input_sha256": {
+    "data/ai-representation.json": "7c9baa8f3dfa5524afe4077e98c5f80f0ab07b682c245720a139b6a7d19d5cd2",
+    "data/ai-aflp-response.json": "2e247835f2c95881b612b7f254c3aec9fe3be4b2a62891f3ca5960e01f7a0e04",
+    "data/ai-aflp-estimates.json": "924c5308ec9c88a087eff02511d7e77c01fc3d604db3caf528ff7fab98961755",
+    "data/birth-rates.json": "3ebc861e3dcc70a30851d0aae1ba0f79c2d005df336e1c805080644c8f69c88d",
+    "data/aflp-locations.geojson": "e40d300c6acd6818c13f117862ff085390132c5b2d85fed3e288ab747cb502ff",
+    "data/aflp-directory.tsv": "4d1bfc90f3ca6fa3f5cd7d9a9969064531e1b9497131a1e59a0975cd98a167f0",
+    "data/california-counties.geojson": "58cc7e43958fa2b77e9e4f530b73539cb1ef7f8426e2449660808c2f1bfaaf70",
+    "data/county-geography.json": "bfaf972170e337bde09e816f69c7b56bf56a537954de06761a887d5da2f5d691",
+    "access.js": "0990026e60547a13c8dc0892b48f0a7e7d8d67bc119c4c87548e2ce2c872b266",
+    "metrics.js": "2a091f70a0e2a3a215c1854a7097b915edcad1962d8329a44a793eab23cdf923"
+  },
+  "evaluation_unit": "Distinct address + city within county, normalized by trimming, lowercasing and collapsing whitespace. Suite text retained. Count saved AFLP location features without using their coordinates. No address missing in matched county = closed-directory count zero, not proof of no support services.",
+  "ground_truth_snapshot_date": "2026-09-05",
+  "population_and_classification": "Previously saved USDA 2023 RUCC with 2020 Census population; no changes to county-geography.json."
+}
